@@ -1,0 +1,78 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from 'react';
+import "./Slider.css";
+import img1 from "../assets/slider/img1.png";
+import img2 from "../assets/slider/img2.png";
+import img3 from "../assets/slider/img3.png";
+import img4 from "../assets/slider/img4.png";
+import img5 from "../assets/slider/img5.png";
+
+const images = [img1, img2, img3, img4, img5];
+
+const Slider = () => {
+    const [carouselItems, setCarouselItems] = useState(images);
+
+    // Update the classes based on the carousel's current state
+    const updateGallery = () => {
+        const updatedClasses = carouselItems.map((item, index) => {
+            if (index === 0) return 'gallery-item-1';
+            if (index === 1) return 'gallery-item-2';
+            if (index === 2) return 'gallery-item-3';
+            if (index === 3) return 'gallery-item-4';
+            if (index === 4) return 'gallery-item-5';
+            return '';
+        });
+        return updatedClasses;
+    };
+
+    const [itemClasses, setItemClasses] = useState(updateGallery());
+
+    const setCurrentState = (direction) => {
+        if (direction === 'previous') {
+            const newArray = [carouselItems[carouselItems.length - 1], ...carouselItems.slice(0, -1)];
+            setCarouselItems(newArray);
+        } else {
+            const newArray = [...carouselItems.slice(1), carouselItems[0]];
+            setCarouselItems(newArray);
+        }
+    };
+
+    useEffect(() => {
+        setItemClasses(updateGallery());
+    }, [carouselItems]);
+
+    return (
+        <section>
+            <div className="w-full">
+                <div className="w-full h-[600px] flex flex-col pl-[200px] bg-[#F7F7F8]">
+                    <div className="w-[480px] h-[130px] py-4">
+                        <h3 className="text-[25px] font-bold leading-[64px]">Our Process</h3>
+                        <span className="text-[#141415] text-[16px] font-normal leading-[21px]">
+                            Providing transformational solutions for Africa's unique challenges
+                        </span>
+                    </div>
+                    <div className='w-[1100px] h-[470px] items-center justify-center'>
+                        <div className='gallery-container'>
+                            {carouselItems.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    alt='slider'
+                                    className={`gallery-item ${itemClasses[index]}`}
+                                    data-index={index + 1}
+                                />
+                            ))}
+                        </div>
+                        <div className="gallery-controls">
+                            <button className="gallery-controls-previous" onClick={() => setCurrentState('previous')}>Previous</button>
+                            <button className="gallery-controls-next" onClick={() => setCurrentState('next')}>Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Slider;
