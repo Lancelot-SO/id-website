@@ -9,7 +9,7 @@ const Navbar = () => {
                 <nav className="fixed top-0 left-0 flex w-full h-[90px] z-50 bg-black bg-opacity-70 items-center justify-between lg:px-[200px]">
                     <Link to="/"><img src={logo} alt="logo" /></Link>
                     <ul className="flex items-center justify-between w-[650px] px-2">
-                        <div className="flex items-center w-[500px] space-x-10">
+                        <div className="flex items-center space-x-10">
                             <li className="font-black text-[12px] leading-[18px] text-white"><Link to="/">HOME</Link></li>
                             <li className="font-black text-[12px] leading-[18px] text-white"><Link to="/about">ABOUT US</Link></li>
                             <li className="font-black text-[12px] leading-[18px] text-white"><Link to="/services">SERVICES</Link></li>
