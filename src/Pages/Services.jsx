@@ -26,10 +26,12 @@ const Services = () => {
             <section>
                 <div className="w-full h-[304px] flex items-center pl-[200px]">
                     <div className="w-[560px] h-[144px]">
-                        <h2 className="text-[30px] font-semibold text-black">History</h2>
+                        <h2 className="text-[30px] font-semibold text-black">Products & Solutions for The Individual</h2>
                         <p className="text-[#56575D] text-[14px]  mt-4">
-                            We are a leading Ghanaian insurance company offering a diverse range of products and services covering general and special risk businesses. We are licensed to underwrite all classes of non-life insurance, such as motor insurance, marine insurance, fire and special perils, goods-in-transit, all risks insurance, etc.
+                            Interactive Digital is a dynamic and innovative marketing communications agency that prides itself on merging creativity with cutting-edge technology to deliver exceptional outcomes for our clients..
                         </p>
+
+
                     </div>
                 </div>
             </section>
@@ -42,7 +44,7 @@ const Services = () => {
                             <p className="text-[#56575D] text-[14px]  mt-2">
                                 Cut through the noise and find your people!You need people to see you and what you can do. No problem! Sit back, relax, and let us create content that speaks to your tribe!.
                             </p>
-                            <Link to="/" className="text-[#FF0226] mt-6">Get interactive on social media </Link>
+                            <Link to="/digital" className="text-[#FF0226] hover:underline mt-6">Get interactive on social media </Link>
                         </div>
                     </div>
                     <div className="bg-blue-600 flex-1">
@@ -63,7 +65,7 @@ const Services = () => {
                             <p className="text-[#56575D] text-[14px]  mt-2">
                                 The hustle and bustle of infinite scrolling, you need a story that stops people in their tracks, with captivating visuals to match. And that’s where we come in…
                             </p>
-                            <Link to="/" className="text-[#FF0226] mt-6">Shoot my story</Link>
+                            <Link to="/media" className="text-[#FF0226] hover:underline mt-6">Shoot my story</Link>
                         </div>
                     </div>
 
@@ -78,7 +80,7 @@ const Services = () => {
                             <h2 className="text-[30px] font-semibold text-black">Online Advertisment  </h2>
                             <p className="text-[#56575D] text-[14px]  mt-2">
                                 Getting found online is hard. Getting found by the right audience? - even harder. Navigating the Wild West of the Internet is no easy feat… unless you’re a pro, like us!!.                            </p>
-                            <Link to="/" className="text-[#FF0226] mt-6">Advertise with us</Link>
+                            <Link to="/advert" className="text-[#FF0226] hover:underline mt-6">Advertise with us</Link>
                         </div>
                     </div>
                     <div className="bg-blue-600 flex-1">
@@ -98,7 +100,7 @@ const Services = () => {
                             <h2 className="text-[30px] font-semibold text-black">Strategy Consulting</h2>
                             <p className="text-[#56575D] text-[14px]  mt-2">
                                 If at first you don’t succeed, just call us!Millions of accounts and thousands of brands, all fighting for top billing. Standing out is all about cracking the code. And would you look at that, we have that here, ready and waiting - just for you!                            </p>
-                            <Link to="/" className="text-[#FF0226] mt-6">Talk to us</Link>
+                            <Link to="/" className="text-[#FF0226] hover:underline mt-6">Talk to us</Link>
                         </div>
                     </div>
 
@@ -114,7 +116,7 @@ const Services = () => {
                             <p className="text-[#56575D] text-[14px]  mt-2">
                                 Find your spot in a noisy world. We know the exact place
                                 We harness the power of digital channels to expand your brand’s reach. Our digital marketing experts develop data-driven strategies to connect with your target audience, increase engagement, and drive conversions..                            </p>
-                            <Link to="/" className="text-[#FF0226] mt-6">Talk to us</Link>
+                            <Link to="/" className="text-[#FF0226] hover:underline mt-6">Talk to us</Link>
                         </div>
                     </div>
                     <div className="bg-blue-600 flex-1">
@@ -124,7 +126,7 @@ const Services = () => {
             </section>
 
             <section>
-                <img src={banner} alt="banner" className="object-cover w-full" loading="lazy" />
+                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
             </section>
         </div>
     )

@@ -121,7 +121,7 @@ const CaseStudy = () => {
             </section>
 
             <section>
-                <img src={banner} alt="banner" className="object-cover w-full" loading="lazy" />
+                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
             </section>
 
 

@@ -22,10 +22,10 @@ const Footer = () => {
         }
     }
     return (
-        <div className="bg-[#1B2534] w-full h-[458px] py-20 text-white flex flex-col items-center justify-center">
-            <div className="w-[1168px] h-[315px] flex items-center justify-between px-4">
+        <div className="bg-[#1B2534] w-full lg:h-[458px] lg:py-20 py-4 text-white flex flex-col items-center lg:justify-center">
+            <div className="lg:w-[1168px] w-full lg:h-[315px] h-auto flex lg:flex-row flex-col items-center justify-between lg:px-4 px-0">
                 {/* Brand Section */}
-                <div className="flex flex-col items-start w-[213px] h-[287px] justify-between py-5">
+                <div className="flex flex-col items-start lg:w-[213px] w-full lg:h-[287px] h-auto justify-between py-5 px-4 lg:px-0">
                     <div>
                         <div className="w-12 h-12 flex items-center gap-1">
                             <img src={logo} alt='logo' className='object-cover' loading='lazy' />
@@ -37,7 +37,7 @@ const Footer = () => {
                             <span className="text-[#FF0226] font-semibold">2024.</span>
                         </p>
                     </div>
-                    <div className="flex space-x-4 mt-4">
+                    <div className="flex space-x-4 lg:mt-4 mt-0">
                         <a href="#"><FaFacebook className="text-white text-xl hover:text-[#FF0226]" /></a>
                         <a href="#"><FaTwitter className="text-white text-xl hover:text-[#FF0226]" /></a>
                         <a href="#"><FaLinkedin className="text-white text-xl hover:text-[#FF0226]" /></a>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
 
                 {/* middle Section */}
-                <div className='w-[363px] h-[234px] flex items-center justify-center rounded-[23px] bg-[#283343]'>
+                <div className='w-[363px] h-[234px] flex items-center lg:justify-center px-4 lg:rounded-[23px] bg-[#283343]'>
                     <div className='w-[270px] h-[158px] flex gap-6'>
                         <div className='flex flex-col'>
                             <h2>Services</h2>
@@ -73,7 +73,7 @@ const Footer = () => {
                 </div>
 
                 {/* video Section */}
-                <div className="relative w-[297px] h-[236px] rounded-lg overflow-hidden cursor-pointer" onClick={togglePlay}>
+                <div className="relative lg:w-[297px] h-[236px] rounded-lg overflow-hidden cursor-pointer" onClick={togglePlay}>
                     <video
                         ref={videoRef}
                         className="w-full h-full object-cover"
@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright Section */}
-            <div className="border-t border-gray-700 w-[1000px] flex justify-between mt-8 pt-4 text-gray-400 text-sm">
+            <div className="border-t border-gray-700 lg:w-[1000px] flex justify-between mt-8 pt-4 px-4 lg:px-0 text-gray-400 text-sm">
                 <span>
                     @ 2024 interactivedigital. All rights reserved.
                 </span>

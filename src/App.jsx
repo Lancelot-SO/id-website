@@ -11,6 +11,9 @@ import CaseStudy from './Pages/CaseStudy'
 import Contact from './Pages/Contact'
 import Footer from './Components/Footer'
 import BlogDetail from './Components/BlogDetail'
+import OnlineAdvertising from './Components/servicedetails/OnlineAdvertising'
+import DigitalMarketing from './Components/servicedetails/DigitalMarketing'
+import Media from './Components/Media'
 
 function App() {
 
@@ -26,6 +29,10 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path='/casestudy' element={<CaseStudy />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/advert' element={<OnlineAdvertising />} />
+          <Route path='/digital' element={<DigitalMarketing />} />
+          <Route path='/media' element={<Media />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

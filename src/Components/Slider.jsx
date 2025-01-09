@@ -45,33 +45,38 @@ const Slider = () => {
     return (
         <section>
             <div className="w-full">
-                <div className="w-full h-[600px] flex flex-col pl-[200px] bg-[#F7F7F8]">
-                    <div className="w-[480px] h-[130px] py-4">
+                <div className="w-full h-[420px] flex  flex-col lg:pl-[200px] pl-4 bg-[#F7F7F8]">
+                    <div className="w-full sm:w-[480px] h-[130px] py-4 px-6">
                         <h3 className="text-[25px] font-bold leading-[64px]">Our Process</h3>
                         <span className="text-[#141415] text-[16px] font-normal leading-[21px]">
                             Providing transformational solutions for Africa's unique challenges
                         </span>
                     </div>
-                    <div className='w-[1100px] h-[470px] items-center justify-center'>
-                        <div className='gallery-container'>
+                    <div className="w-full h-[470px] items-center justify-center mx-auto lg:my-0 my-28">
+                        <div className="gallery-container">
                             {carouselItems.map((image, index) => (
                                 <img
                                     key={index}
                                     src={image}
-                                    alt='slider'
+                                    alt="slider"
                                     className={`gallery-item ${itemClasses[index]}`}
                                     data-index={index + 1}
                                 />
                             ))}
                         </div>
-                        <div className="gallery-controls">
-                            <button className="gallery-controls-previous" onClick={() => setCurrentState('previous')}>Previous</button>
-                            <button className="gallery-controls-next" onClick={() => setCurrentState('next')}>Next</button>
+                        <div className="gallery-controls lg:mt-0 mt-24">
+                            <button className="gallery-controls-previous" onClick={() => setCurrentState('previous')}>
+                                Previous
+                            </button>
+                            <button className="gallery-controls-next" onClick={() => setCurrentState('next')}>
+                                Next
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     );
 };
 

@@ -1,45 +1,71 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useParams } from "react-router-dom";
-import Blog1 from "../assets/blog/blog1.png";
-import Blog2 from "../assets/blog/blog2.png";
-import Blog3 from "../assets/blog/blog3.png";
+import Mtn from "../assets/blog/mtn.png";
+import Mtn1 from "../assets/blog/mtn1.png";
+import Mtn2 from "../assets/blog/mtnbanner.png";
 import Profile1 from "../assets/blog/profile.png";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import banner from "../assets/banner.png";
 
-import detail1 from "../assets/blog/detail1.png"
-import detail2 from "../assets/blog/detail2.png"
-
 
 const blogPosts = [
     {
         id: 1,
-        title: "A dive into the digital phase of advertising",
-        content: "Full content for digital advertising goes here...",
-        image: Blog1,
-        author: "Janet A. Saah",
-        date: "April 02, 2024",
+        title: "Interactive Digital Celebrates MTN Ghana’s Historic Achievement",
+        excerpt: "It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications.",
+        image: Mtn,
+        photo1: Mtn1,
+        photo2: Mtn2,
+        author: "Philomina Akekudaga",
+        date: "January 09, 2025",
         profile: Profile1,
+        content: `It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications. This remarkable achievement is a testament to their commitment to excellence and innovation in the telecommunications industry.`,
+        content1: `As MTN Ghana's dedicated digital marketing agency for the past five years, Interactive Digital has played a pivotal role in this success story. Our comprehensive suite of marketing services has been instrumental in driving MTN Ghana's digital presence and market leadership. We've utilized consistent social media management, strategic digital marketing for brand visibility and customer engagement, as well as high-quality content marketing to achieve the results we celebrate today.`,
+        content2: `“In celebrating MTN Ghana's remarkable achievements, I reflect on the inspiring 6-year journey we have embarked on together. It has been a privilege to have contributed to driving the attainment of a modern connected life for all and sundry, and we are excited to continue pioneering innovative solutions for all our clients,"  commented Interactive Digital's Chief Operating Officer, Ekow Thompson.`,
+        content3: `“He added that this milestone fuels the commitment of Interactive Digital to pushing creative boundaries and enhancing the digital experience for all. We extend our heartfelt congratulations to MTN Ghana as we look back fondly on the incredible work we’ve created together. A truly rewarding experience. We are inspired to push ourselves to new heights of innovation and excellence in digital marketing. Here's to celebrating this milestone and looking forward to many more achievements together as we continue to evolve our services and stay at the forefront of advertising.`,
+
+
     },
     {
         id: 2,
-        title: "Influencers vs social media personalities",
-        content: "Full content for influencers vs social media...",
-        image: Blog2,
+        title: "Influencer vs social media personalities",
+        excerpt: "While influencers can certainly impact consumer decisions, their effectiveness can vary depending on factors such as industry niche, audience engagement, and the specific goals of a brand's marketing...",
+        image: Mtn,
         author: "Kwadwo A. Sirebour",
         date: "April 02, 2024",
         profile: Profile1,
+        content: `It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications. This remarkable achievement is a testament to their commitment to excellence and innovation in the telecommunications industry.`,
+        content1: `As MTN Ghana's dedicated digital marketing agency for the past five years, Interactive Digital has played a pivotal role in this success story. Our comprehensive suite of marketing services has been instrumental in driving MTN Ghana's digital presence and market leadership. We've utilized consistent social media management, strategic digital marketing for brand visibility and customer engagement, as well as high-quality content marketing to achieve the results we celebrate today.`,
+        content2: `“In celebrating MTN Ghana's remarkable achievements, I reflect on the inspiring 6-year journey we have embarked on together. It has been a privilege to have contributed to driving the attainment of a modern connected life for all and sundry, and we are excited to continue pioneering innovative solutions for all our clients,"  commented Interactive Digital's Chief Operating Officer, Ekow Thompson.`,
+        content3: `“He added that this milestone fuels the commitment of Interactive Digital to pushing creative boundaries and enhancing the digital experience for all. We extend our heartfelt congratulations to MTN Ghana as we look back fondly on the incredible work we’ve created together. A truly rewarding experience. We are inspired to push ourselves to new heights of innovation and excellence in digital marketing. Here's to celebrating this milestone and looking forward to many more achievements together as we continue to evolve our services and stay at the forefront of advertising.`,
     },
     {
         id: 3,
         title: "How Artificial Intelligence is Shaping Our Future",
-        content: "Full content for AI transformation goes here...",
-        image: Blog3,
+        excerpt: "There's no denying that technology is transforming our world. From the way we work to the way we communicate, innovation seems to be the name ...",
+        image: Mtn,
         author: "Judith Abani",
         date: "April 02, 2024",
         profile: Profile1,
+        content: `It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications. This remarkable achievement is a testament to their commitment to excellence and innovation in the telecommunications industry.`,
+        content1: `As MTN Ghana's dedicated digital marketing agency for the past five years, Interactive Digital has played a pivotal role in this success story. Our comprehensive suite of marketing services has been instrumental in driving MTN Ghana's digital presence and market leadership. We've utilized consistent social media management, strategic digital marketing for brand visibility and customer engagement, as well as high-quality content marketing to achieve the results we celebrate today.`,
+        content2: `“In celebrating MTN Ghana's remarkable achievements, I reflect on the inspiring 6-year journey we have embarked on together. It has been a privilege to have contributed to driving the attainment of a modern connected life for all and sundry, and we are excited to continue pioneering innovative solutions for all our clients,"  commented Interactive Digital's Chief Operating Officer, Ekow Thompson.`,
+        content3: `“He added that this milestone fuels the commitment of Interactive Digital to pushing creative boundaries and enhancing the digital experience for all. We extend our heartfelt congratulations to MTN Ghana as we look back fondly on the incredible work we’ve created together. A truly rewarding experience. We are inspired to push ourselves to new heights of innovation and excellence in digital marketing. Here's to celebrating this milestone and looking forward to many more achievements together as we continue to evolve our services and stay at the forefront of advertising.`,
+    },
+    {
+        id: 4,
+        title: "How Artificial Intelligence is Shaping Our Future",
+        excerpt: "There's no denying that technology is transforming our world. From the way we work to the way we communicate, innovation seems to be the name ...",
+        image: Mtn,
+        author: "Judith Abani",
+        date: "April 02, 2024",
+        profile: Profile1,
+        content: `It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications. This remarkable achievement is a testament to their commitment to excellence and innovation in the telecommunications industry.`,
+        content1: `As MTN Ghana's dedicated digital marketing agency for the past five years, Interactive Digital has played a pivotal role in this success story. Our comprehensive suite of marketing services has been instrumental in driving MTN Ghana's digital presence and market leadership. We've utilized consistent social media management, strategic digital marketing for brand visibility and customer engagement, as well as high-quality content marketing to achieve the results we celebrate today.`,
+        content2: `“In celebrating MTN Ghana's remarkable achievements, I reflect on the inspiring 6-year journey we have embarked on together. It has been a privilege to have contributed to driving the attainment of a modern connected life for all and sundry, and we are excited to continue pioneering innovative solutions for all our clients,"  commented Interactive Digital's Chief Operating Officer, Ekow Thompson.`,
+        content3: `“He added that this milestone fuels the commitment of Interactive Digital to pushing creative boundaries and enhancing the digital experience for all. We extend our heartfelt congratulations to MTN Ghana as we look back fondly on the incredible work we’ve created together. A truly rewarding experience. We are inspired to push ourselves to new heights of innovation and excellence in digital marketing. Here's to celebrating this milestone and looking forward to many more achievements together as we continue to evolve our services and stay at the forefront of advertising.`,
     },
 ];
 
@@ -58,6 +84,7 @@ const BlogDetail = () => {
                         src={blogPost.image}
                         alt={blogPost.title}
                         className="w-full h-[381px] object-cover rounded-lg"
+                        loading="lazy"
                     />
                     <div className="p-6">
                         <h1 className="text-3xl font-bold mb-2">{blogPost.title}</h1>
@@ -65,7 +92,8 @@ const BlogDetail = () => {
                             <img
                                 src={blogPost.profile}
                                 alt="Author"
-                                className="w-8 h-8 rounded-full"
+                                className="w-8 h-8 object-cover rounded-full"
+                                loading="lazy"
                             />
                             <div className="flex justify-between items-center w-full">
                                 <span className="text-sm">{blogPost.author}</span>
@@ -74,72 +102,33 @@ const BlogDetail = () => {
 
                         </div>
                         <p className="text-gray-700 leading-relaxed">{blogPost.content}</p>
-                        <p>
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodomolestie consequat,
-                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan eiusto odio dignissim qui blandit praesent luptatum.
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet .
+                        <br />
+                        <p className="text-gray-700 leading-relaxed">
+                            {blogPost.content1}
                         </p>
                         <br />
-                        <p>
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodomolestie consequat,
-                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan eiusto odio dignissim qui blandit praesent luptatum.
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet .
+                        <p className="text-gray-700 leading-relaxed">
+                            {blogPost.content2}
                         </p>
                         <br />
-                        <p>
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodomolestie consequat,
-                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan eiusto odio dignissim qui blandit praesent luptatum.
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet .
+                        <p className="text-gray-700 leading-relaxed">
+                            {blogPost.content3}
                         </p>
                         <div className="flex w-full mt-6 gap-10">
                             <img
-                                src={detail1}
+                                src={blogPost.photo1}
                                 alt="Author"
-                                className="w-[317px] h-[274px] rounded-lg"
+                                className="w-[317px] h-[274px] object-cover rounded-lg"
+                                loading="lazy"
+
                             />
                             <img
-                                src={detail2}
+                                src={blogPost.photo2}
                                 alt="Author"
-                                className="w-[317px] h-[274px] rounded-lg"
+                                className="w-[317px] h-[274px] object-cover rounded-lg"
+                                loading="lazy"
                             />
                         </div>
-
-                        <h2 className="mt-8 font-bold text-[23px]">Habitasse per feugiat aliquam luctus</h2>
-                        <br />
-                        <p>
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodomolestie consequat,
-                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan eiusto odio dignissim qui blandit praesent luptatum.
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet .
-                        </p>
-                        <br />
-
-                        <h2 className="mt-8 font-bold text-[23px]">Habitasse per feugiat aliquam luctus</h2>
-                        <br />
-                        <p>
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodomolestie consequat,
-                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan eiusto odio dignissim qui blandit praesent luptatum.
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet .
-                        </p>
-
-                        <div className="w-full h-[253px] rounded-lg bg-[#F3F7FA] mt-8 items-center justify-center flex flex-col">
-                            <span className="w-[490px] h-[94px]">
-                                dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.
-                            </span>
-                            <small> By Jerry Sam</small>
-                        </div>
-                        <br />
-                        <p>
-                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                            quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodomolestie consequat,
-                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan eiusto odio dignissim qui blandit praesent luptatum.
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet .
-                        </p>
 
                         <div className="flex w-full items-center justify-between mt-10">
                             <span>Share</span>

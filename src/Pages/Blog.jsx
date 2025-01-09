@@ -1,4 +1,4 @@
-import Blog1 from "../assets/blog/blog1.png";
+import Mtn from "../assets/blog/mtn.png"
 import Blog2 from "../assets/blog/blog2.png";
 import Blog3 from "../assets/blog/blog3.png";
 import Profile1 from "../assets/blog/profile.png";
@@ -8,25 +8,24 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
+
 const blogPosts = [
     {
         id: 1,
-        title: "A dive into the digital phase of advertising",
-        excerpt: "Advertising has transcended traditional boundaries into the digital phase over the last 30 years, and it's a change anyone in the advertising field should be constantly adapting to.",
-        image: Blog1,
-        author: "Janet A. Saah",
-        date: "April 02, 2024",
-        readTime: "3 min read",
+        title: "Interactive Digital Celebrates MTN Ghana’s Historic Achievement",
+        excerpt: "It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications.",
+        image: Mtn,
+        author: "Philomina Akekudaga",
+        date: "January 09, 2025",
         profile: Profile1,
     },
     {
         id: 2,
-        title: "Influencers vs social media personalities",
+        title: "Influencer vs social media personalities",
         excerpt: "While influencers can certainly impact consumer decisions, their effectiveness can vary depending on factors such as industry niche, audience engagement, and the specific goals of a brand's marketing...",
         image: Blog2,
         author: "Kwadwo A. Sirebour",
         date: "April 02, 2024",
-        readTime: "5 min read",
         profile: Profile1,
     },
     {
@@ -36,17 +35,15 @@ const blogPosts = [
         image: Blog3,
         author: "Judith Abani",
         date: "April 02, 2024",
-        readTime: "7 min read",
         profile: Profile1,
     },
     {
         id: 4,
         title: "How Artificial Intelligence is Shaping Our Future",
         excerpt: "There's no denying that technology is transforming our world. From the way we work to the way we communicate, innovation seems to be the name ...",
-        image: Blog1,
+        image: Mtn,
         author: "Judith Abani",
         date: "April 02, 2024",
-        readTime: "7 min read",
         profile: Profile1,
     },
 ];
@@ -105,10 +102,10 @@ const Blog = () => {
                             />
                         </div>
                         <div className="flex-1 flex flex-col justify-center">
-                            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4 line-clamp-2">
                                 {latestBlog.title}
                             </h2>
-                            <p className="text-gray-600 leading-relaxed mb-6">
+                            <p className="text-gray-600 leading-relaxed mb-6 line-clamp-4">
                                 {latestBlog.excerpt}
                             </p>
                             <div className="flex items-center gap-4 mb-6">
@@ -150,7 +147,7 @@ const Blog = () => {
                                 className="w-full h-[200px] object-cover"
                             />
                             <div className="p-4 flex-1">
-                                <h3 className="font-bold text-lg mb-2 text-gray-800">{post.title}</h3>
+                                <h3 className="font-bold text-lg mb-2 text-gray-800 line-clamp-2">{post.title}</h3>
                                 <p className="text-sm text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                             </div>
                             <div className="flex items-center justify-between px-4 pb-4">
@@ -195,7 +192,7 @@ const Blog = () => {
             </div>
 
             <section>
-                <img src={banner} alt="banner" className="object-cover w-full" loading="lazy" />
+                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
             </section>
         </div>
     );

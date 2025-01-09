@@ -2,8 +2,6 @@
 import aboutbg from "../assets/about/aboutbg.png"
 import about1 from "../assets/about/about-1.png"
 import about2 from "../assets/about/about-2.png"
-import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import SlickSlider from "../Components/SlickSlider";
 
 import banner from "../assets/banner.png"
@@ -30,17 +28,15 @@ const About = () => {
                         </div>
                         <div className="w-[530px] h-full flex flex-col items-center justify-center gap-2">
                             <div className="w-[439px] h-[214px] border-l-2 border-[#FF0226] p-4">
-                                <h2 className="w-[285px] h-[69px] text-[27px] font-semibold leading-[34px]">Products & Solutions for The Individual</h2>
+                                <h2 className="w-[285px] h-auto text-[27px] font-semibold leading-[34px]">History</h2>
                                 <span className="w-[383px] h-[83px] text-[15px] font-normal leading-[21px] text-[#888991]">
-                                    Interactive Digital is a dynamic and innovative marketing communications agency that prides itself on merging creativity with cutting-edge technology to deliver exceptional outcomes for our clients..
+                                    We are a leading Ghanaian insurance company offering a diverse range of products and services covering general and special risk businesses. We are licensed to underwrite all classes of non-life insurance, such as motor insurance, marine insurance, fire and special perils, goods-in-transit, all risks insurance, etc.
                                 </span>
 
-                                <Link to="/" className="flex items-center gap-1 text-[#FF0226]">Learn More <FaArrowRight /></Link>
+                                {/* <Link to="/" className="flex items-center gap-1 text-[#FF0226]">Learn More <FaArrowRight /></Link> */}
 
                             </div>
-                            <div className="w-[439px] h-[49px] flex items-center border-l-2 border-opacity-50 border-[#888991] p-4">
-                                <h2 className="text-[27px] font-semibold leading-[34px] text-black">Our Projects </h2>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -58,7 +54,7 @@ const About = () => {
                     </div>
                     <div className="flex-1 relative">
                         <img src={about2} alt="service" className="bg-cover w-full" loading="lazy" />
-                        <div className="glass bg-[#FF0226] bg-opacity-70 absolute bottom-0 lg:right-0 md:right-0 right-4 rounded-t-lg lg:w-[385px] w-[230px] lg:h-[174px] h-[140px]">
+                        {/* <div className="glass bg-[#FF0226] bg-opacity-70 absolute bottom-0 lg:right-0 md:right-0 right-4 rounded-t-lg lg:w-[385px] w-[230px] lg:h-[174px] h-[140px]">
                             <div className="lg:p-6 p-2">
                                 <span className="text-white w-[300px] h-[32px] lg:text-[24px] leading-[32px] font-semibold">INTERACTIVE DIGITAL</span>
                                 <p className="text-white lg:text-[16px] text-[12px] leading-[24px] font-normal lg:mt-2 mt-0">
@@ -68,7 +64,7 @@ const About = () => {
                                     <Link to="https://claims-gh.coronation.ng/" target='_blank' rel='noopener noreferrer'>Call us today</Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -78,7 +74,7 @@ const About = () => {
             </section>
 
             <section>
-                <img src={banner} alt="banner" className="object-cover w-full" loading="lazy" />
+                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
             </section>
         </div>
     )

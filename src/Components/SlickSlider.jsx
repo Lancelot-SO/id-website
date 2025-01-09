@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 import Team1 from "../assets/slider/team1.png"
+import Team2 from "../assets/slider/team2.png"
+import Kay from "../assets/slider/kay.png"
+import Danda from "../assets/slider/danda.png"
+import Danda1 from "../assets/slider/danda1.png"
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,21 +15,23 @@ import "slick-carousel/slick/slick-theme.css";
 const data = [
     {
         id: 1,
-        photo: Team1,
-        name: "Mr. Frank Beecham",
-        position: "Board Chairman",
-        desc: `Mr. Frank Beecham is the Chairman of the Board of Coronation Insurance Ghana LTD. Mr. Beecham is a lawyer by profession and a past National President of the Ghana Bar Association. He has spent the greater part of his working life in banking, having joined Merchant Bank Ghana Ltd as a Banking Officer in 1977.`,
+        photo: Kay,
+        name: "Frank Adjei Otu",
+        position: "Creative Director",
+        desc: `A multidisciplinary creative with boundless imagination that pushes visuals, concepts and ideas beyond the limits of conventional thinking.
+A graduate of Kwame Nkrumah University of Science and Technology, Frank has 14 years' experience in the marketing communications space having worked in a few multinational agencies. He has delivered award winning work for brands such as Sky-Girls, Nestle Nescafé, Diageo, GTP and CFAO.`,
     },
     {
         id: 2,
-        photo: Team1,
+        photo: Kay,
         name: "Mr. Olusegun Ogbonnewo",
         position: "Non-Executive Director",
         desc: `Mr. Olusegun Ogbonnewo is a Director in TenGen Holdings Limited with over 27 years’ professional experience in the financial service industry cutting across banking, human capital development, operations, payment systems and financial technology.`,
     },
     {
         id: 3,
-        photo: Team1,
+        photo: Danda,
+        hoverphoto: Danda1,
         name: "Mrs. Peggy Onwu",
         position: "Non-Executive Director",
         desc: `Mrs. Peggy Onwu has over eighteen years’ experience as a Chartered Accountant. She is a Fellow of the Chartered Certified Accountants (FCCA), England for over fifteen years and a member of the institute of Chartered Accountants Ghana (ICAG).`,
@@ -45,23 +52,29 @@ const data = [
     },
     {
         id: 6,
-        photo: Team1,
-        name: "Mrs. Vesta Nunoo",
-        position: "Non-Executive Director",
-        desc: `Mrs. Vesta Nunoo has over eighteen years’ experience as a Chartered Accountant. She is a Fellow of the Chartered Certified Accountants (FCCA), England for over fifteen years and a member of the institute of Chartered Accountants Ghana (ICAG).`,
+        photo: Danda,
+        hoverphoto: Danda1,
+        name: "Danda Berko Tagbor",
+        position: "Programme Manager",
+        desc: `An experienced marketer with 10+ years of work experience in the fields of brand/event management, credit control and project management.
+Her  work experience covers corporate administration, communications, strategic planning and management, people and client management as well as colleague relationship management.`,
     },
     {
         id: 7,
         photo: Team1,
-        name: "Dr. Yaw Adom - Boateng",
-        position: "Managing Director",
-        desc: `Dr. Yaw Adom-Boateng is a Fellow of the Chartered Insurance Institute of Ghana (FCIIG) and the Chartered Insurance Institute of UK (FCII-UK). He is a seasoned insurance professional with over 22 years of experience in the insurance industry.`,
+        hoverphoto: Team2,
+        name: "Ekow Thompson",
+        position: "Chief Operating Officer",
+        desc: `A visionary business leader and an engineer with 20 years of experience in the Telecom, Media, and Technology sector. During this time, he honed his skills in business development, sales, technology and innovation management, and business strategy formulation.
+He passionately believes in the transformative impact of data and technology on people’s lives and leads Interactive Digital in assisting clients with their marketing communications and digital transformation endeavors.`,
     },
     // Additional board members can be added here...
 ];
 
 const SlickSlider = () => {
     const sliderRef = React.useRef(null);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
 
 
     const settings = {
@@ -114,12 +127,25 @@ const SlickSlider = () => {
                         <div key={index} className="lg:px-4">
                             <div className="flex lg:flex-row flex-col w-full lg:h-[420px] shadow-lg overflow-hidden rounded-lg">
                                 {/* Image Section */}
-                                <div className="lg:w-1/2 bg-[#EFEFF0]">
+                                <div
+                                    className="lg:w-1/2 bg-[#EFEFF0] relative"
+                                    onMouseEnter={() => setHoveredIndex(index)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                >
                                     <img
                                         src={item.photo}
                                         alt={item.name}
-                                        className="lg:w-full lg:h-full w-[350px] h-[280px] object-cover"
+                                        className={`lg:w-full lg:h-full w-[350px] h-[280px] object-cover absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? "opacity-0" : "opacity-100"
+                                            }`}
                                     />
+                                    {item.hoverphoto && (
+                                        <img
+                                            src={item.hoverphoto}
+                                            alt={item.name}
+                                            className={`lg:w-full lg:h-full w-[350px] h-[280px] object-cover absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? "opacity-100" : "opacity-0"
+                                                }`}
+                                        />
+                                    )}
                                 </div>
                                 {/* Text Section */}
                                 <div className="lg:w-1/2 h-[300px] lg:h-full bg-[#EFEFF0] text-white lg:p-8 p-2 flex flex-col justify-center">

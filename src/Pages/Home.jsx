@@ -102,21 +102,26 @@ const Home = () => {
         AOS.refresh();
     }, []);
     return (
-        <div className="">
-            <div className="w-full bg-cover">
-                <img src={herobg} className="w-full h-[700px] bg-cover" loading="lazy" />
-            </div>
-            <div>
-                <div className="absolute bottom-0 left-[200px] w-[780px] h-[200px] bg-[#ED0707] p-6 bg-opacity-60">
-                    <div className="w-[731px] h-[184px]">
-                        <div className="w-[337px] h-[112px]">
-                            <h1 className="text-white font-semibold text-[48px] leading-[56px]">
+        <div className="overflow-hidden">
+            <div className="relative w-full bg-cover">
+                <img
+                    src={herobg}
+                    className="w-full h-[700px] lg:h-[700px] sm:h-[400px] bg-cover object-cover"
+                    loading="lazy"
+                    alt="Hero Background"
+                />
+                <div className="absolute bottom-0 left-0 md:left-[50px] lg:left-[200px] w-full md:w-[780px] h-auto p-4 sm:p-6 bg-[#ED0707] bg-opacity-60">
+                    <div className="w-full md:w-[731px]">
+                        <div className="w-full sm:w-[337px]">
+                            <h1 className="text-white font-semibold text-[32px] sm:text-[36px] md:text-[48px] leading-tight md:leading-[56px]">
                                 Your <span className="text-black font-bold">Digital</span>
-                                <br />POWERHOUSE</h1>
+                                <br />
+                                POWERHOUSE
+                            </h1>
                         </div>
-
-                        <span className="text-[20px] font-medium leading-[28px] opacity-80 text-white">
-                            Creating experiences, driving solutions, growing your business...<br />
+                        <span className="block mt-2 text-[14px] sm:text-[16px] md:text-[20px] font-medium leading-[20px] md:leading-[28px] text-white opacity-80">
+                            Creating experiences, driving solutions, growing your business...
+                            <br className="hidden sm:block" />
                             is our business.
                         </span>
                     </div>
@@ -124,27 +129,45 @@ const Home = () => {
             </div>
 
 
+
             <section>
-                <div className="w-full h-[563px] mt-[30px] flex items-center justify-center">
-                    <div className="w-[1050px] h-[457px] flex">
-                        <div className="relative w-[553px] h-full rounded-bl-[20px]">
-                            <img src={sectbg} alt="sect" className="rounded-bl-[20px]" loading="lazy" />
-                            <div className="absolute top-2 left-[100px]">
-                                <img src={sectImg} alt="sect" className="w-[414px] h-[372px]" loading="lazy" />
+                <div className="w-full mt-[30px] flex items-center justify-center">
+                    <div className="lg:w-[1050px] w-full lg:h-[457px] h-auto flex lg:flex-row flex-col items-center">
+                        {/* Left Section */}
+                        <div className="relative lg:w-[553px] w-full h-auto rounded-bl-[20px]">
+                            <img
+                                src={sectbg}
+                                alt="Background"
+                                className="rounded-bl-[20px] w-full h-auto"
+                                loading="lazy"
+                            />
+                            <div className="absolute top-2 left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:left-[100px]">
+                                <img
+                                    src={sectImg}
+                                    alt="Image Overlay"
+                                    className="lg:w-[414px] lg:h-[372px] w-[250px] h-[220px] object-contain"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
-                        <div className="w-[496px] h-full bg-black rounded-r-[20px] flex items-center justify-center">
-                            <div className="w-[381px] h-[205px]">
-                                <div className="w-[200px] h-[73px]">
-                                    <h2 className="text-white font-bold text-[25px] leading-[36px]">
+
+                        {/* Right Section */}
+                        <div className="lg:w-[496px] w-full lg:h-full h-auto bg-black rounded-r-[20px] flex items-center justify-center p-4 lg:p-0">
+                            <div className="lg:w-[381px] w-full lg:h-[205px] h-auto text-center lg:text-left">
+                                <div className="lg:w-[200px] w-full lg:h-[73px] h-auto">
+                                    <h2 className="text-white font-bold text-[20px] sm:text-[25px] leading-[30px] sm:leading-[36px]">
                                         YOU DREAM IT,
-                                        WE CREATE IT</h2>
+                                        <br className="block lg:hidden" />
+                                        WE CREATE IT
+                                    </h2>
                                 </div>
-                                <div className="w-[381px] h-[119px]">
-                                    <span className="text-[14px] text-white leading-5 font-normal">
-                                        An award-winning 360 marketing communications agency that creates compelling experiences for great brands.
-                                        Our solutions leverage strategy, creative thinking and coordinated executions to deliver on business goals with focus on digital.
-                                        Our approach is agile, collaborative and human led..
+                                <div className="lg:w-[381px] w-full lg:h-[119px] h-auto mt-4">
+                                    <span className="text-[12px] sm:text-[14px] text-white leading-5 font-normal">
+                                        An award-winning 360 marketing communications agency that creates
+                                        compelling experiences for great brands. Our solutions leverage
+                                        strategy, creative thinking, and coordinated executions to
+                                        deliver on business goals with a focus on digital. Our approach
+                                        is agile, collaborative, and human-led.
                                     </span>
                                 </div>
                             </div>
@@ -153,23 +176,35 @@ const Home = () => {
                 </div>
             </section>
 
+
             <section>
-                <div className="w-full h-[630px]">
-                    <div className="w-[450px] h-[130px] ml-[200px] py-4">
-                        <h3 className="text-[25px] font-bold leading-[64px]">
+                <div className="w-full lg:h-[630px] h-auto py-4">
+                    {/* Header Section */}
+                    <div className="lg:w-[450px] w-full lg:ml-[200px] ml-4 px-4 lg:px-0 py-4">
+                        <h3 className="lg:text-[25px] text-[20px] font-bold lg:leading-[64px] leading-[30px]">
                             Our Services
                         </h3>
-                        <span className="text-[#56575D] text-[18px] font-normal leading-6">
-                            When we say 360, we mean it. From content creation
-                            to media production, we do it all...
+                        <span className="text-[#56575D] lg:text-[18px] text-[14px] font-normal leading-6">
+                            When we say 360, we mean it. From content creation to media production,
+                            we do it all...
                         </span>
                     </div>
+
+                    {/* Image and Menu Section */}
                     <div className="relative">
-                        <img src={sectImg2} alt="sect" className="object-cover w-full" loading="lazy" />
-                        <div className="absolute bottom-2 left-[200px] w-[1083px] h-[58px] bg-[#ED0707] bg-opacity-5">
-                            <nav className="flex justify-between items-start p-4">
+                        <img
+                            src={sectImg2}
+                            alt="sect"
+                            className="object-cover w-full h-auto"
+                            loading="lazy"
+                        />
+                        <div className="absolute bottom-2 lg:left-[200px] left-4 right-4 lg:w-[1083px] w-auto h-auto bg-[#ED0707] bg-opacity-5 p-2 lg:p-4 rounded-md">
+                            <nav className="flex lg:flex-row flex-wrap justify-center lg:justify-between items-center">
                                 {menuItems.map((item, index) => (
-                                    <div key={index} className="flex flex-col items-center w-full mx-2 first:ml-0 last:mr-0">
+                                    <div
+                                        key={index}
+                                        className="flex flex-col items-center w-full lg:w-auto mx-1 lg:mx-2 my-2 lg:my-0 first:ml-0 last:mr-0"
+                                    >
                                         <div className="w-full h-1 mb-2">
                                             {item === "Social media marketing" ? (
                                                 <div className="w-full h-full flex">
@@ -180,7 +215,9 @@ const Home = () => {
                                                 <div className="w-full h-full bg-gray-300 rounded-lg"></div>
                                             )}
                                         </div>
-                                        <span className="text-sm text-white text-center whitespace-nowrap">{item}</span>
+                                        <span className="text-xs lg:text-sm text-white text-center whitespace-nowrap">
+                                            {item}
+                                        </span>
                                     </div>
                                 ))}
                             </nav>
@@ -189,58 +226,65 @@ const Home = () => {
                 </div>
             </section>
 
+
             <section>
-                <div className="w-full h-[500px] flex flex-col pl-[200px] bg-[#F7F78]">
-                    <div className="w-[480px] h-[130px] py-4">
-                        <h3 className="text-[25px] font-bold leading-[64px]">
+                <div className="w-full lg:h-[500px] h-auto py-6 bg-[#F7F78] flex flex-col lg:pl-[200px] px-4">
+                    {/* Header Section */}
+                    <div className="lg:w-[480px] w-full h-auto py-2">
+                        <h3 className="lg:text-[25px] text-[20px] font-bold lg:leading-[64px] leading-[30px] mt-8">
                             Our Process
                         </h3>
-                        <span className="text-[#141415] text-[16px] font-normal leading-[21px]">
+                        <span className="text-[#141415] lg:text-[16px] text-[14px] font-normal leading-[21px]">
                             Providing transformational solutions for Africa’s unique challenges
                         </span>
                     </div>
-                    <div className="">
-                        <div className="w-full h-[324px] flex items-center">
-                            <div className="w-full max-w-[1050px] h-[294px] flex">
-                                {panels.map((panel, index) => (
-                                    <div
-                                        key={index}
-                                        className={`flex-1 ${panel.background} ${panel.textColor} p-6 flex flex-col justify-between ${panel.background === 'bg-white' ? 'shadow-lg' : ''
-                                            }`}
-                                    >
-                                        <div>
-                                            <div className="w-4 h-4 bg-red-500 rounded-full mb-4"></div>
-                                            <h2 className="text-xl font-bold mb-4">{panel.title}</h2>
-                                            <p className="text-sm">{panel.description}</p>
-                                        </div>
-                                        <a href="#" className="text-sm font-semibold flex items-center">
-                                            Learn More
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                            </svg>
-                                        </a>
+
+                    {/* Panels Section */}
+                    <div className="w-full lg:h-[324px] h-auto flex items-center mt-4">
+                        <div className="w-full max-w-[1050px] h-auto flex lg:flex-row flex-col gap-4">
+                            {panels.map((panel, index) => (
+                                <div
+                                    key={index}
+                                    className={`flex-1 ${panel.background} ${panel.textColor} p-6 flex flex-col justify-between ${panel.background === 'bg-white' ? 'shadow-lg' : ''
+                                        }`}
+                                >
+                                    <div>
+                                        <div className="w-4 h-4 bg-red-500 rounded-full my-4"></div>
+                                        <h2 className="lg:text-xl text-lg font-bold mb-4">{panel.title}</h2>
+                                        <p className="lg:text-sm text-xs">{panel.description}</p>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
+
             <section>
-                <div className="w-full h-[212px] bg-[#141415] flex items-center">
-                    <div className="w-[1047px] h-[132px] ml-[200px]">
-                        <span className="text-[30px] font-bold leading-[44px] text-white">
-                            “A good advertisement is one which sells the product without drawing
-                            attention to itself.”
+                <div className="w-full h-auto bg-[#141415] flex items-center py-6 px-4 lg:px-0">
+                    <div className="lg:w-[1047px] w-full lg:h-[132px] h-auto lg:ml-[200px] mx-auto">
+                        {/* Quote Text */}
+                        <span className="text-white font-bold lg:text-[30px] text-[20px] lg:leading-[44px] leading-[30px] block mb-4">
+                            “A good advertisement is one which sells the product without drawing attention to itself.”
                         </span>
-                        <div className="flex items-center justify-between">
-                            <span className="text-[20px] font-medium leading-[28px] text-white">By David Ogilvy </span>
-                            <Link to="/" className="text-white text-[16px] w-[108px] h-[44px] flex items-center justify-center bg-[#FF0226] rounded-lg">Contact uS</Link>
+
+                        {/* Author and Contact Button */}
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                            <span className="text-white font-medium lg:text-[20px] text-[16px] lg:leading-[28px] leading-[24px] mb-4 lg:mb-0">
+                                By David Ogilvy
+                            </span>
+                            <Link
+                                to="/contact"
+                                className="text-white text-[16px] w-[108px] h-[44px] flex items-center justify-center bg-[#FF0226] rounded-lg"
+                            >
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
+
 
             <section>
                 <div>
@@ -253,16 +297,16 @@ const Home = () => {
             </section>
 
             <section className="flex items-center justify-center">
-                <div className=" h-[470px] bg-white p-6">
-                    <div className="flex space-x-6 overflow-x-auto">
+                <div className=" lg:h-[470px] h-auto bg-white p-6">
+                    <div className="flex lg:flex-row flex-col lg:space-x-6 space-x-0 gap-4 lg:gap-0">
                         {blogPosts.map((post) => (
-                            <div key={post.id} className="flex-shrink-0 w-64">
+                            <div key={post.id} className="flex-shrink-0 lg:w-64 mb-4 lg:mb-0">
                                 <img
                                     src={post.image}
                                     alt={post.title}
                                     className="w-[216px] h-40 rounded-lg object-cover mb-4"
                                 />
-                                <div className="h-[120px]">
+                                <div className="lg:h-[120px] h-auto">
                                     <h3 className="font-semibold text-[14px] mb-2 line-clamp-2">
                                         {post.title}
                                     </h3>
@@ -285,7 +329,7 @@ const Home = () => {
             </section>
 
             <section>
-                <div className="bg-[#EFEFF0] w-full h-[140px] flex items-center justify-center">
+                <div className="hidden bg-[#EFEFF0] w-full h-[140px] items-center justify-center">
                     <div className="w-[1245px] h-[58px] flex items-center justify-between">
                         <img src={brand1} alt="brand" className="object-cover" loading="lazy" />
                         <img src={brand2} alt="brand" className="object-cover" loading="lazy" />
@@ -299,7 +343,7 @@ const Home = () => {
             </section>
 
             <section>
-                <img src={banner} alt="banner" className="object-cover w-full" loading="lazy" />
+                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
             </section>
 
 
