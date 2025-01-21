@@ -9,6 +9,10 @@ import digital4 from "../../assets/digital/digital4.png"
 
 
 const DigitalMarketing = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
     return (
         <div>
             <div className="relative">

@@ -29,7 +29,7 @@ const Footer = () => {
                     <div>
                         <div className="w-12 h-12 flex items-center gap-1">
                             <img src={logo} alt='logo' className='object-cover' loading='lazy' />
-                            <h3 className="text-2xl font-semibold">Interactive Digital</h3>
+                            <h3 className="text-[18px] font-semibold">Interactive Digital</h3>
                         </div>
                         <p className="text-gray-400 mt-2 w-full h-[100px] text-[16px] font-normal leading-[25px]">
                             Creates compelling online experiences in digital media for great brands.

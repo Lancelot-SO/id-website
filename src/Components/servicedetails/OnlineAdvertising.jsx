@@ -9,6 +9,10 @@ import advertfooter from "../../assets/onlineadvert/advertfooter.png"
 
 
 const OnlineAdvertising = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
     return (
         <div>
             <div className="relative">

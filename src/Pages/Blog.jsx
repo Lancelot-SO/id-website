@@ -1,6 +1,8 @@
 import Mtn from "../assets/blog/mtn.png"
-import Blog2 from "../assets/blog/blog2.png";
-import Blog3 from "../assets/blog/blog3.png";
+import Picbanner from "../assets/blog/picbanner.png";
+
+import Digi from "../assets/blog/digi.jpg";
+
 import Profile1 from "../assets/blog/profile.png";
 import blogbanner from "../assets/blog/blogbanner.png";
 import banner from "../assets/banner.png";
@@ -21,29 +23,29 @@ const blogPosts = [
     },
     {
         id: 2,
-        title: "Influencer vs social media personalities",
-        excerpt: "While influencers can certainly impact consumer decisions, their effectiveness can vary depending on factors such as industry niche, audience engagement, and the specific goals of a brand's marketing...",
-        image: Blog2,
+        title: "Why Digital Storytelling Matters and How Interactive Digital Is Making It Count.",
+        excerpt: "You’re scrolling through your feed online, and then a video pops up, it's not just one of those boring pitches. Instead, it tells a catchy story that draws you in. Before you realise it, you are emotionally invested and eager to learn more about the brand behind it.",
+        image: Digi,
         author: "Kwadwo A. Sirebour",
         date: "April 02, 2024",
         profile: Profile1,
     },
     {
         id: 3,
-        title: "How Artificial Intelligence is Shaping Our Future",
-        excerpt: "There's no denying that technology is transforming our world. From the way we work to the way we communicate, innovation seems to be the name ...",
-        image: Blog3,
+        title: "Interactive Digital and Street Children Empowerment Foundation (SCEF) Host Successful ‘Sound of Freedom’ Movie Screening to Raise Funds for Street-Connected Children Initiatives.",
+        excerpt: "It was all about impact on Friday, October 18, 2024, as the Street Children Empowerment Foundation (SCEF) hosted a fundraising screening of the film “Sound of Freedom” at the AMA Omanye Aba Hall in Accra.",
+        image: Mtn,
         author: "Judith Abani",
-        date: "April 02, 2024",
+        date: "October 18, 2024",
         profile: Profile1,
     },
     {
         id: 4,
-        title: "How Artificial Intelligence is Shaping Our Future",
-        excerpt: "There's no denying that technology is transforming our world. From the way we work to the way we communicate, innovation seems to be the name ...",
-        image: Mtn,
-        author: "Judith Abani",
-        date: "April 02, 2024",
+        title: "Leveraging Platform Specific Features For Digital Communication",
+        excerpt: "Digital platforms have changed the way businesses communicate and how people connect. These platforms offer a variety of tools and features that often go unnoticed due to a lack of deeper understanding",
+        image: Picbanner,
+        author: "Philomina Akekudaga",
+        date: "June 07, 2024",
         profile: Profile1,
     },
 ];
@@ -51,6 +53,10 @@ const blogPosts = [
 const latestBlog = blogPosts[0]; // Assuming the first blog is the latest
 
 const Blog = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
     const postsPerPage = 3; // Number of posts per page
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();
@@ -93,12 +99,14 @@ const Blog = () => {
                             className="max-w-md bg-[#F1F1F1] w-[400px] h-[49px] p-4 rounded-md"
                         />
                     </div>
-                    <div className="flex flex-col lg:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg max-w-6xl mx-auto">
+                    <div
+                        onClick={() => handleReadMore(latestBlog.id)}
+                        className="flex flex-col lg:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg max-w-6xl mx-auto cursor-pointer">
                         <div className="flex-1">
                             <img
                                 src={latestBlog.image}
                                 alt={latestBlog.title}
-                                className="w-full lg:w-[500px] h-[300px] object-cover rounded-lg"
+                                className="w-full lg:w-[500px] h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-105"
                             />
                         </div>
                         <div className="flex-1 flex flex-col justify-center">
@@ -139,13 +147,16 @@ const Blog = () => {
                     {currentPosts.map((post) => (
                         <div
                             key={post.id}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+                            onClick={() => handleReadMore(post.id)}
+                            className="bg-white cursor-pointer rounded-lg shadow-lg overflow-hidden flex flex-col"
                         >
-                            <img
-                                src={post.image}
-                                alt={post.title}
-                                className="w-full h-[200px] object-cover"
-                            />
+                            <div className="relative overflow-hidden">
+                                <img
+                                    src={post.image}
+                                    alt={post.title}
+                                    className="w-full h-[280px] object-cover transform transition-transform duration-300 hover:scale-105"
+                                />
+                            </div>
                             <div className="p-4 flex-1">
                                 <h3 className="font-bold text-lg mb-2 text-gray-800 line-clamp-2">{post.title}</h3>
                                 <p className="text-sm text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
@@ -190,6 +201,7 @@ const Blog = () => {
                     ))}
                 </div>
             </div>
+
 
             <section>
                 <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />

@@ -14,6 +14,10 @@ import mediabottom from "../assets/media/mediabottom.png"
 
 
 const Media = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef(null);
 

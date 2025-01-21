@@ -8,6 +8,10 @@ import banner from "../assets/banner.png"
 
 
 const CaseStudy = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
     return (
         <div>
             <div className="relative">

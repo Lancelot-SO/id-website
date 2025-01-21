@@ -2,6 +2,10 @@
 import contactbanner from "../assets/contact/contactbanner.png"
 import telephone from "../assets/contact/telephonebg.png"
 const Contact = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
     return (
         <div>
             <div className="relative">

@@ -3,24 +3,25 @@
 import React, { useState } from 'react';
 import pattern from "../assets/pattern.png";
 import personImage from "../assets/slider/jay.png";
+import Mtn from "../assets/onlineadvert/mtn.png"
 
 const TeamSlider = () => {
     const testimonials = [
         {
             id: 1,
-            name: "Alex Jerry Sam",
-            title: "CEO",
-            company: "Mckelite Group",
-            image: personImage,
-            testimonial: "Eduarix is an ideal location for anybody who wants to learn something new or share what they know with others. Eduarix is a worldwide platform for online learning that helps to connect with one another via knowledge. It comes highly recommended from my side."
+            name: "W.N. Kwashie jnr",
+            title: "Digital Marketing Manager",
+            company: "MTN Ghana",
+            image: Mtn,
+            testimonial: "Interactive Digital has been an integral part of our online success at MTN Ghana for the past 5 years. Their understanding of the digital landscape in Ghana, creativity and top notch account management has enabled them to deliver exceptional results for our  social media engagement and digital marketing efforts, and I would highly recommend them to any business seeking to enhance their digital presence."
         },
         {
             id: 2,
-            name: "Sarah Johnson",
+            name: "Coronation Insurance",
             title: "Lead Developer",
-            company: "Tech Solutions",
+            company: "Coronation Insurance",
             image: personImage,
-            testimonial: "The platform's intuitive interface and comprehensive learning resources have made it an invaluable tool for our team's professional development. Eduarix has significantly improved our learning processes."
+            testimonial: `Working with Interactive Digital was an exceptional experience. Their team showcased expertise, creativity, and professionalism from the start, turning our vision into a stunning digital presence. They excelled in attention to detail, timely delivery, and proactive problem-solving, making the process seamless and enjoyable. I highly recommend them for their skill and reliability. Their dedication to excellence and customer satisfaction is evident in all they do.`
         },
         {
             id: 3,
@@ -57,21 +58,18 @@ const TeamSlider = () => {
 
                 {/* Content section with padding-left applied only here */}
                 <div className="flex flex-col lg:pl-[200px] pl-4 bg-[#F7F7F8]">
-                    <div className="w-[330px] py-4">
+                    <div className="w-full py-4">
                         <div>
                             <h3 className="text-[25px] font-semibold">
                                 Don't take our word for it. Ask them.
                             </h3>
-                            <span className="text-[#141415] text-[16px] font-normal leading-[21px] mt-2 block">
-                                They have the words...
-                            </span>
                         </div>
                     </div>
 
                     {/* Slider Content */}
-                    <div className="flex flex-col sm:flex-row max-w-[900px] lg:h-[450px] items-center overflow-hidden mx-auto">
+                    <div className="flex flex-col sm:flex-row w-[1100px] lg:h-[450px] items-center overflow-hidden mx-auto">
                         {/* Person Image */}
-                        <div className="w-[300px] h-[300px] sm:mr-8 mb-4 sm:mb-0">
+                        <div className="w-[350px] h-[300px] sm:mr-8 mb-4 sm:mb-0">
                             <img src={image} alt={name} className="w-full h-full object-cover rounded-lg shadow-lg" />
                         </div>
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
@@ -5,8 +6,17 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Team1 from "../assets/slider/team1.png"
 import Team2 from "../assets/slider/team2.png"
 import Kay from "../assets/slider/kay.png"
+import Kay2 from "../assets/slider/kay2.jpg"
+import Fred1 from "../assets/slider/Fred1.jpg"
+import Fred2 from "../assets/slider/Fred2.jpg"
+import Kofi from "../assets/slider/Kofi.jpg"
+import Kofi2 from "../assets/slider/Kofi2.jpg"
+import Jade from "../assets/slider/jade.png"
 import Danda from "../assets/slider/danda.png"
 import Danda1 from "../assets/slider/danda1.png"
+import Jasmine from "../assets/slider/jasmine.jpg"
+import Jasmine1 from "../assets/slider/jasmine2.jpg"
+
 
 
 import "slick-carousel/slick/slick.css";
@@ -16,6 +26,7 @@ const data = [
     {
         id: 1,
         photo: Kay,
+        hoverphoto: Kay2,
         name: "Frank Adjei Otu",
         position: "Creative Director",
         desc: `A multidisciplinary creative with boundless imagination that pushes visuals, concepts and ideas beyond the limits of conventional thinking.
@@ -23,32 +34,36 @@ A graduate of Kwame Nkrumah University of Science and Technology, Frank has 14 y
     },
     {
         id: 2,
-        photo: Kay,
-        name: "Mr. Olusegun Ogbonnewo",
-        position: "Non-Executive Director",
-        desc: `Mr. Olusegun Ogbonnewo is a Director in TenGen Holdings Limited with over 27 years’ professional experience in the financial service industry cutting across banking, human capital development, operations, payment systems and financial technology.`,
+        photo: Fred1,
+        hoverphoto: Fred2,
+        name: "Fred Tackie-Yarboi",
+        position: " Head, Performance Marketing and Media",
+        desc: `A digital marketing and media strategist with over 14 years experience with digital marketing communications in the Ghanaian landscape.
+He has experience delivering multi-channel campaigns across social, search, email, SEO and digital media, delivering business results for global and local brands.`,
     },
     {
         id: 3,
-        photo: Danda,
-        hoverphoto: Danda1,
-        name: "Mrs. Peggy Onwu",
-        position: "Non-Executive Director",
-        desc: `Mrs. Peggy Onwu has over eighteen years’ experience as a Chartered Accountant. She is a Fellow of the Chartered Certified Accountants (FCCA), England for over fifteen years and a member of the institute of Chartered Accountants Ghana (ICAG).`,
+        photo: Jasmine,
+        hoverphoto: Jasmine1,
+        name: "Jasmine Balfour",
+        position: "Content Lead",
+        desc: `A spirited content writer and storyteller with a knack for transforming brand stories into lasting impressions. Her creative touch has brought life to renowned names like Malta Guinness, LemFi, Stanbic Bank, Gino Tomato Mix and more. With a flair for crafting narratives that strike a chord, Jasmine firmly believes that a sprinkle of wit and a dash of humour can turn a good story into a great one.`,
     },
     {
         id: 4,
-        photo: Team1,
-        name: "Mr. Richard Osei - Anim",
-        position: "Non-Executive Director",
-        desc: `Mr. Richard Osei-Anim is an Associate and Chartered Insurance Practitioner of the Associate Chartered Insurance Institute of London, UK. He has over 15 years’ experience in insurance and risk management and has worked in the past with Burrows Keith Group, CGU Insurance and broking giants like Aon and Miller Insurance Group.`,
+        photo: Kofi,
+        hoverphoto: Kofi2,
+        name: "Kofi Owusu-Akyaw",
+        position: "Snr Account Manager",
+        desc: `An Account manager with a passion for creative delivery that exceeds clients’ expectations while forging mutually rewarding bonds. He has over 6 years of digital marketing expertise spanning FMCG, Telco and Banking.
+Solution-oriented and with a demonstrable history of successful campaigns, he has worked on big ticket brands including MTN Ghana, Stanbic Bank, uniBank, GLICO and Surfline.`,
     },
     {
         id: 5,
-        photo: Team1,
-        name: "Mr. Olamide Olajolo",
-        position: "Non-Executive Director",
-        desc: `Mr. Olamide Olajolo has about twenty-two (22) years’ experience in the Insurance industry cutting across insurance underwriting and sales. Mr. Olamide Olajolo was formerly the Managing Director/Chief Executive Officer of the Nigeria Liability Insurance Pool and the Vice President Business Development at Heirs Insurance Limited/Heirs Assurance Limited.`,
+        photo: Jade,
+        name: "Jade Appiah-Lartey",
+        position: "Head, Strategy",
+        desc: `Meet Jade Appiah-Lartey, a dynamic professional known for her strategic prowess, academic rigour, and unwavering commitment to driving success in the realm of marketing communication and business development. With a proven track record of delivering impactful results, Jade is poised to continue making significant contributions to the field while guiding organizations towards sustainable growth and prosperity.`,
     },
     {
         id: 6,
@@ -115,52 +130,56 @@ const SlickSlider = () => {
     };
 
     return (
-        <div className="relative overflow-hidden pl-[200px] pt-10 h-[700px]">
-            <div className="text-left mb-12">
-                <h2 className="lg:text-4xl text-[20px] font-bold leading-tight">Meet the Team</h2>
-                <p className="w-[580px] h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
-                    Our board consists of highly accomplished financial services experts with a combined wealth of experience spanning more than two centuries.                </p>
+        <div className="relative overflow-hidden pt-10 lg:h-[700px] h-[1100px]">
+            <div className="text-left mb-12 px-4 lg:pl-[200px] ">
+                <h2 className="lg:text-4xl text-[20px] font-bold leading-tight">Leadership</h2>
+                <p className="w-[950px] h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
+                    Our team brings together diverse expertise in digital strategy, creative technology, and market innovation. Led by professionals with global experience and local insight, we're positioned to drive digital excellence across West Africa.
+                </p>
             </div>
-            <div className="relative">
+            <div className="relative lg:px-10 px-0">
                 <Slider ref={sliderRef} {...settings}>
                     {data.map((item, index) => (
-                        <div key={index} className="lg:px-4">
-                            <div className="flex lg:flex-row flex-col w-full lg:h-[420px] shadow-lg overflow-hidden rounded-lg">
+                        <div key={index} className="lg:px-0 px-2">
+                            <div className="flex lg:flex-row flex-col w-full lg:h-[420px] h-[750px] shadow-lg overflow-hidden rounded-lg">
                                 {/* Image Section */}
                                 <div
-                                    className="lg:w-1/2 bg-[#EFEFF0] relative"
+                                    className="lg:w-1/2 w-full h-full bg-[#EFEFF0] relative"
                                     onMouseEnter={() => setHoveredIndex(index)}
                                     onMouseLeave={() => setHoveredIndex(null)}
                                 >
                                     <img
                                         src={item.photo}
                                         alt={item.name}
-                                        className={`lg:w-full lg:h-full w-[350px] h-[280px] object-cover absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? "opacity-0" : "opacity-100"
+                                        loading="lazy"
+                                        className={`w-full lg:h-full h-[500px] object-cover absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? "opacity-0" : "opacity-100"
                                             }`}
                                     />
                                     {item.hoverphoto && (
                                         <img
                                             src={item.hoverphoto}
                                             alt={item.name}
-                                            className={`lg:w-full lg:h-full w-[350px] h-[280px] object-cover absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? "opacity-100" : "opacity-0"
+                                            loading="lazy"
+                                            className={`w-full lg:h-full h-[500px] object-cover absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? "opacity-100" : "opacity-0"
                                                 }`}
                                         />
                                     )}
                                 </div>
                                 {/* Text Section */}
-                                <div className="lg:w-1/2 h-[300px] lg:h-full bg-[#EFEFF0] text-white lg:p-8 p-2 flex flex-col justify-center">
-                                    <h3 className="lg:text-2xl text-[20px] text-black font-semibold mb-2 ">{item.name}</h3>
-                                    <p className="text-md text-black mb-4 motion-preset-typewriter-[24]">{item.position}</p>
-                                    <p className="text-sm text-black">{item.desc}</p>
+                                <div className="lg:w-1/2 w-full lg:h-full h-auto bg-[#EFEFF0] text-white lg:p-8 p-4 flex flex-col justify-center">
+                                    <h3 className="text-lg lg:text-2xl text-black font-semibold mb-2">{item.name}</h3>
+                                    <p className="text-sm lg:text-md text-black mb-4">{item.position}</p>
+                                    <p className="text-xs lg:text-sm text-black">{item.desc}</p>
                                 </div>
                             </div>
                         </div>
+
                     ))}
                 </Slider>
             </div>
             {/* Previous Button */}
             <button
-                className={`absolute hover:bg-[#FF0226] hover:text-white lg:top-[670px] lg:right-40 transform -translate-y-1/2 px-4 py-2 rounded-lg 
+                className={`absolute hover:bg-[#FF0226] hover:text-white lg:top-[670px] top-[1000px] lg:right-40 right-[50%] transform -translate-y-1/2 px-4 py-2 rounded-lg 
                    `}
                 onClick={() => sliderRef.current.slickPrev()}
             >
@@ -169,7 +188,7 @@ const SlickSlider = () => {
 
             {/* Next Button */}
             <button
-                className={`absolute hover:bg-[#FF0226] hover:text-white lg:top-[670px] top-[780px] lg:right-20 transform -translate-y-1/2 px-4 py-2 rounded-lg 
+                className={`absolute hover:bg-[#FF0226] hover:text-white lg:top-[670px] top-[1000px] lg:right-20 right-[35%] transform -translate-y-1/2 px-4 py-2 rounded-lg 
                     `}
                 onClick={() => sliderRef.current.slickNext()}
             >

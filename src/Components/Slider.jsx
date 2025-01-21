@@ -45,14 +45,14 @@ const Slider = () => {
     return (
         <section>
             <div className="w-full">
-                <div className="w-full h-[420px] flex  flex-col lg:pl-[200px] pl-4 bg-[#F7F7F8]">
-                    <div className="w-full sm:w-[480px] h-[130px] py-4 px-6">
-                        <h3 className="text-[25px] font-bold leading-[64px]">Our Process</h3>
+                <div className="w-full lg:h-[630px] h-[430px] flex flex-col bg-[#F7F7F8]">
+                    <div className="w-full sm:w-[480px] h-[130px] lg:ml-[200px] pl-0 py-4 px-6">
+                        <h3 className="text-[25px] font-bold leading-[64px]">Our Portfolio</h3>
                         <span className="text-[#141415] text-[16px] font-normal leading-[21px]">
                             Providing transformational solutions for Africa's unique challenges
                         </span>
                     </div>
-                    <div className="w-full h-[470px] items-center justify-center mx-auto lg:my-0 my-28">
+                    <div className="w-full h-[470px] items-center justify-center lg:my-0 my-28">
                         <div className="gallery-container">
                             {carouselItems.map((image, index) => (
                                 <img

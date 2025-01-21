@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
 .casebg {
   background-image: url("./assets/case/casebg.png");
   background-size: cover;
