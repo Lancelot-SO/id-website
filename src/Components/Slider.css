@@ -11,7 +11,8 @@
     height: 200px;
     opacity: 0;
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    /* Smooth animation */
     width: 330px;
     z-index: 0;
     border-radius: 15px;
@@ -22,13 +23,16 @@
 .gallery-item-1 {
     left: 15%;
     opacity: .4;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.9);
+    /* Slight scaling for perspective */
 }
 
 .gallery-item-2,
 .gallery-item-4 {
     height: 250px;
     opacity: 0.8;
+    transform: translateX(-50%) scale(1);
+    /* Default scaling */
     width: 380px;
     z-index: 1;
 }
@@ -43,7 +47,8 @@
     height: 300px;
     opacity: 1;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1.1);
+    /* Larger scaling for active item */
     width: 430px;
     z-index: 2;
 }
@@ -56,7 +61,8 @@
 .gallery-item-5 {
     left: 85%;
     opacity: .4;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.9);
+    /* Slight scaling */
 }
 
 .gallery-controls {
@@ -87,16 +93,17 @@
 .gallery-controls-previous::before {
     content: "";
     border: solid #000;
+    opacity: 70%;
     border-width: 0 5px 5px 0;
     display: inline-block;
     height: 5px;
     left: -30px;
-    padding: 10px;
+    padding: 7px;
     position: absolute;
     top: 0;
     transform: rotate(135deg) translateY(-50%);
     transition: left 0.15s ease-in-out;
-    width: 2px;
+    width: 1px;
 }
 
 .gallery-controls-previous:hover::before {
@@ -110,16 +117,17 @@
 .gallery-controls-next::before {
     content: "";
     border: solid #000;
+    opacity: 70%;
     border-width: 0 5px 5px 0;
     display: inline-block;
     height: 5px;
     right: -30px;
-    padding: 10px;
+    padding: 7px;
     position: absolute;
     top: 50%;
     transform: rotate(-45deg) translateY(-50%);
     transition: right 0.15s ease-in-out;
-    width: 2px;
+    width: 1px;
 }
 
 .gallery-controls-next:hover::before {

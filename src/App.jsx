@@ -15,6 +15,8 @@ import OnlineAdvertising from './Components/servicedetails/OnlineAdvertising'
 import DigitalMarketing from './Components/servicedetails/DigitalMarketing'
 import Media from './Components/Media'
 import Strategy from './Components/servicedetails/Strategy'
+import TopFooter from './Components/TopFooter'
+import MtnDetail from './Components/casedetails/MtnDetail'
 
 function App() {
 
@@ -34,7 +36,11 @@ function App() {
           <Route path='/digital' element={<DigitalMarketing />} />
           <Route path='/media' element={<Media />} />
           <Route path='/strategy' element={<Strategy />} />
+
+          <Route path='/mtndetail' element={<MtnDetail />} />
+
         </Routes>
+        <TopFooter />
         <Footer />
       </BrowserRouter>
     </div>

@@ -4,7 +4,7 @@ import addbanner from "../../assets/onlineadvert/addbanner.png"
 import malt from "../../assets/onlineadvert/malt.png"
 import shield from "../../assets/onlineadvert/shield.png"
 import mtn from "../../assets/onlineadvert/mtn.png"
-import advertfooter from "../../assets/onlineadvert/advertfooter.png"
+import stanbic from "../../assets/slider/img3.png"
 
 
 
@@ -24,11 +24,11 @@ const OnlineAdvertising = () => {
 
             <section>
                 <div className="w-full h-[304px] flex items-center pl-[200px] bg-black">
-                    <div className="w-[1000px]">
-                        <h2 className="text-[30px] font-semibold text-white w-[483px]">
+                    <div className="w-[1000px] flex flex-col gap-6">
+                        <h2 className="text-[30px] font-semibold text-white w-[750px]">
                             SEEING IS BELIEVING AND THE NUMBERS DON’T LIE!
                         </h2>
-                        <div className='text-white flex'>
+                        <div className='text-white flex gap-10'>
                             <span>
                                 We are creatives, which means stellar work is our ultimate goal.
                                 But we do understand that it doesn’t amount to much if it is placed in front of the right audiences.
@@ -116,9 +116,9 @@ const OnlineAdvertising = () => {
                         <div className="w-[1118px] h-[400px] my-4 py-4 relative">
                             <div className="">
                                 <img
-                                    src={malt}
+                                    src={stanbic}
                                     alt="Malta Guinness"
-                                    className="shadow-lg object-cover"
+                                    className="w-[491px] h-[327px] shadow-lg object-cover"
                                 />
 
                             </div>
@@ -172,10 +172,6 @@ const OnlineAdvertising = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section>
-                <img src={advertfooter} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
             </section>
 
         </div>

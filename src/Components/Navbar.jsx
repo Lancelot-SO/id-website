@@ -30,7 +30,7 @@ const Navbar = () => {
                 <ul className="hidden lg:flex items-center justify-between w-[650px] px-2">
                     <div className="flex items-center space-x-10">
                         {["/", "/about us", "/services", "/blog", "/case studies"].map((path, index) => (
-                            <li key={index} className="font-black text-[12px] leading-[18px] text-white">
+                            <li key={index} className="font-black text-[12px] leading-[18px] text-white transform translate-y-1 hover:scale-[-10px] duration-300 cursor-pointer">
                                 <NavLink
                                     to={path}
                                     className={({ isActive }) =>
@@ -42,7 +42,7 @@ const Navbar = () => {
                             </li>
                         ))}
                     </div>
-                    <div className="flex w-[80px] h-[40px] bg-[#ED0707] items-center justify-center">
+                    <div className="flex w-[80px] h-[40px] bg-[#ED0707] items-center justify-center rounded-[20px]">
                         <li className="font-black text-[12px] leading-[18px] text-white">
                             <NavLink
                                 to="/contact"

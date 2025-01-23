@@ -9,10 +9,13 @@ import Picbanner from "../assets/blog/picbanner.png";
 import Picmainbanner from "../assets/blog/picmainbanner.png";
 import Pic1 from "../assets/blog/Picture 1.jpg"
 import Pic2 from "../assets/blog/Picture 2.jpg"
-import Profile1 from "../assets/blog/profile.png";
+import Profile1 from "../assets/blog/profile1.jpg";
+import Profile2 from "../assets/blog/profile2.jpg";
+import Profile3 from "../assets/blog/profile3.jpg";
+
+
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-import banner from "../assets/banner.png";
 import CommentForm from "./CommentForm";
 
 
@@ -26,7 +29,7 @@ const blogPosts = [
         photo2: Mtn2,
         author: "Philomina Akekudaga",
         date: "January 09, 2025",
-        profile: Profile1,
+        profile: Profile3,
         content: `It’s a triple threat! We are thrilled to congratulate MTN Ghana's outstanding accomplishment as the 5th-time winner of the Chartered Institute of Marketing Ghana (CIMG) Telecommunications Award for Overall Marketing Orientation Organization of the Year 2023, Telecom Company of the Year, as well as the Hall of Fame Award for Telecommunications. This remarkable achievement is a testament to their commitment to excellence and innovation in the telecommunications industry.`,
         content1: `As MTN Ghana's dedicated digital marketing agency for the past five years, Interactive Digital has played a pivotal role in this success story. Our comprehensive suite of marketing services has been instrumental in driving MTN Ghana's digital presence and market leadership. We've utilized consistent social media management, strategic digital marketing for brand visibility and customer engagement, as well as high-quality content marketing to achieve the results we celebrate today.`,
         content2: `“In celebrating MTN Ghana's remarkable achievements, I reflect on the inspiring 6-year journey we have embarked on together. It has been a privilege to have contributed to driving the attainment of a modern connected life for all and sundry, and we are excited to continue pioneering innovative solutions for all our clients,"  commented Interactive Digital's Chief Operating Officer, Ekow Thompson.`,
@@ -58,7 +61,7 @@ const blogPosts = [
         image: Mtn,
         author: "Judith Abani",
         date: "October 18, 2024",
-        profile: Profile1,
+        profile: Profile2,
         content: `It was all about impact on Friday, October 18, 2024, as the Street Children Empowerment Foundation (SCEF) hosted a fundraising screening of the film “Sound of Freedom” at the AMA Omanye Aba Hall in Accra. The event, organized to raise funds to support SCEF’s initiatives in creating awareness about child exploitation and trafficking, was a resounding success. The event brought together civil society advocates, supporters, and corporate partners, all united in their commitment to making a positive difference in the lives of street-connected children. `,
         content1: `Following the screening, Apiorkor Seyiram Ashong-Abbey moderated an insightful panel discussion on the devastating impact of child exploitation and trafficking to our future generations and the critical role individuals can play in combating this growing menace. She was joined by Paul Semeh, Founder & Executive Director, Street Children Empowerment Foundation (SCEF). “The abuse these trafficked children are subjected to is what drives me to go out and find street-connected children and try to put them into schools. The fight against this issue is bigger than any one organization. We need everyone to unite in combating this crisis that’s stealing the future of innocent children,” he commented.`,
         content2: `The event was the culmination of months of hard work and collaboration between SCEF and Interactive Digital (!D). Our agency was at the helm of a creative strategic and digital campaign aimed at amplifying SCEF’s cause. Our team, led by Mr. Ekow Thompson, Chief Operations Officer, graced the occasion to show our support for this significant event. “Our support for SCEF’s initiatives is a testament to our belief in driving purpose beyond profits. At !D, we are committed to leveraging our creative and technological expertise to make a meaningful impact on society. Supporting street-connected children is not just a cause; it aligns with our core values of integrity, teamwork, and empathy. We believe that by working together, we can create lasting change and inspire others to join us in this mission. We extend our heartfelt appreciation to the Ninani Group, CRENSHAW and to all the partners who lent us resources in cash and in kind to make this a success.”, Mr. Ekow Thompson said. Join us in supporting SCEF’s mission to empower street-connected children. Together, we can make a difference.`,
@@ -72,7 +75,7 @@ const blogPosts = [
         photo2: Pic2,
         author: "Philomina Akekudaga",
         date: "June 07, 2024",
-        profile: Picmainbanner,
+        profile: Profile3,
         content: `Digital platforms have changed the way businesses communicate and how people connect. These platforms offer a variety of tools and features that often go unnoticed due to a lack of deeper understanding. But by fully grasping how these features work, we can enhance the effectiveness of digital communication strategies. As part of efforts to equip students with practical knowledge and skills to harness the features of digital platforms in their academic and professional endeavors, Interactive Digital’s IDea Bootcamp in partnership with University of Ghana held a lecture at the University of Ghana on 7th June 2024. Two seasoned professionals from Interactive Digital; Fredrick Tackie-Yarboi and Jade Appiah-Lartey tutored on ways in which the Features of Digital Platforms can be leveraged for optimum Digital Communications. `,
         content1: `The facilitators began the session amidst an atmosphere of curiosity, asking the students about the various digital platforms they are familiar with, their features and how they utilize them to connect with each other.  Most of the students shared their first- hand experience with some features of the most popular digital platforms. The prevailing notion throughout the interactive session was that most of the students are familiar with the features of the predominant digital platforms but do not fully understand their potential. To better understand the topic at hand, Fred provided a comprehensive overview of the intricacies of digital platform features spanning Multimedia sharing, Messaging and chats, Content creation tools, Interactive features of tools, Analytics and metrics, Community Building, Advertising and promotion, Event Management, Collaborative Events and Customized profiles pages.`,
         content2: `Towards the end, the facilitators had an engagement session where they answered a range of questions from the students. Overall, the students gathered a deep understanding of platform – specific features and how they can harness them in their future career in Digital Communications. Interactive Digital’s IDea Bootcamp initiative is committed to sharing practical knowledge and industry expertise. Idea Bootcamp is not merely a trend, but a deliberate effort towards impacting knowledge to create a more robust and agile workforce for the future.`,
@@ -218,7 +221,7 @@ const BlogDetail = () => {
                             <Link
                                 key={post.id}
                                 to={`/blog/${post.id}`}
-                                className="flex items-center gap-4 mb-4 hover:bg-gray-100 p-2 rounded-md transition">
+                                className="flex gap-4 mb-4 hover:bg-gray-100 p-2 rounded-md transition">
                                 <img
                                     src={post.image}
                                     alt={post.title}
@@ -259,10 +262,6 @@ const BlogDetail = () => {
                     </div>
                 </aside>
             </div>
-
-            <section>
-                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
-            </section>
         </div>
     );
 };

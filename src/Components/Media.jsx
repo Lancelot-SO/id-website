@@ -9,7 +9,6 @@ import media3 from "../assets/media/media3.png";
 import prod1 from "../assets/media/prod1.png";
 import prod2 from "../assets/media/prod2.png";
 import prod3 from "../assets/media/prod3.png";
-import mediabottom from "../assets/media/mediabottom.png"
 
 
 
@@ -154,10 +153,6 @@ const Media = () => {
                 </div>
             </section>
 
-
-            <section>
-                <img src={mediabottom} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
-            </section>
         </div>
     );
 };

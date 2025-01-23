@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { useState, useRef } from 'react'
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaTumblr } from 'react-icons/fa';
-import logo from "../assets/logo.png"
+import footerlogo from "../assets/footerlogo.png"
 import { Link } from 'react-router-dom';
 import { Play, Pause } from 'lucide-react'
+import video from "../assets/videobg.mp4"
 
 
 const Footer = () => {
@@ -22,14 +23,13 @@ const Footer = () => {
         }
     }
     return (
-        <div className="bg-[#1B2534] w-full lg:h-[458px] lg:py-20 py-4 text-white flex flex-col items-center lg:justify-center">
+        <div className="bg-[#303030] w-full lg:h-[458px] lg:py-20 py-4 text-white flex flex-col items-center lg:justify-center">
             <div className="lg:w-[1168px] w-full lg:h-[315px] h-auto flex lg:flex-row flex-col items-center justify-between lg:px-4 px-0">
                 {/* Brand Section */}
-                <div className="flex flex-col items-start lg:w-[213px] w-full lg:h-[287px] h-auto justify-between py-5 px-4 lg:px-0">
-                    <div>
-                        <div className="w-12 h-12 flex items-center gap-1">
-                            <img src={logo} alt='logo' className='object-cover' loading='lazy' />
-                            <h3 className="text-[18px] font-semibold">Interactive Digital</h3>
+                <div className="flex flex-col items-start lg:w-[270px] w-full lg:h-[287px] h-auto justify-between py-5 px-4 lg:px-0">
+                    <div className='w-[280px] h-[70px]'>
+                        <div className="w-full h-full flex gap-1">
+                            <img src={footerlogo} alt='logo' className='object-cover' loading='lazy' />
                         </div>
                         <p className="text-gray-400 mt-2 w-full h-[100px] text-[16px] font-normal leading-[25px]">
                             Creates compelling online experiences in digital media for great brands.
@@ -46,13 +46,13 @@ const Footer = () => {
                 </div>
 
                 {/* middle Section */}
-                <div className='w-[363px] h-[234px] flex items-center lg:justify-center px-4 lg:rounded-[23px] bg-[#283343]'>
+                <div className='w-[363px] h-[234px] flex items-center lg:justify-center px-4 lg:rounded-[23px] bg-[#3A3A3A]'>
                     <div className='w-[270px] h-[158px] flex gap-6'>
                         <div className='flex flex-col'>
                             <h2>Services</h2>
                             <ul>
-                                <li><Link to="/" className='text-[#ABABAB]'>social Media </Link></li>
-                                <li><Link to="/" className='text-[#ABABAB]'>Online advertising </Link></li>
+                                <li><Link to="/" className='text-[#ABABAB]'>Social Media </Link></li>
+                                <li><Link to="/" className='text-[#ABABAB]'>Online Advertising </Link></li>
                                 <li><Link to="/" className='text-[#ABABAB]'>Media </Link></li>
                                 <li><Link to="/" className='text-[#ABABAB]'>Website Design </Link></li>
                                 <li><Link to="/" className='text-[#ABABAB]'>Strategy </Link></li>
@@ -73,17 +73,19 @@ const Footer = () => {
                 </div>
 
                 {/* video Section */}
-                <div className="relative lg:w-[297px] h-[236px] rounded-lg overflow-hidden cursor-pointer" onClick={togglePlay}>
+                <div className="relative lg:w-[297px] h-[236px] rounded-lg overflow-hidden cursor-pointer"
+                    onClick={togglePlay}>
                     <video
                         ref={videoRef}
                         className="w-full h-full object-cover"
                         loop
+                        muted
                         playsInline
-                        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        src={video}
                     />
                     {!isPlaying && (
                         <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition-opacity duration-300">
-                            <div className="w-16 h-16 rounded-full bg-[#ff7171] flex items-center justify-center transition-transform hover:scale-110">
+                            <div className="w-16 h-16 rounded-full bg-[#FF0226] bg-opacity-20 flex items-center justify-center transition-transform hover:scale-110">
                                 <Play className="w-8 h-8 text-white fill-white translate-x-0.5" />
                             </div>
                         </div>

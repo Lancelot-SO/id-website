@@ -3,9 +3,12 @@ import Picbanner from "../assets/blog/picbanner.png";
 
 import Digi from "../assets/blog/digi.jpg";
 
-import Profile1 from "../assets/blog/profile.png";
+import Profile1 from "../assets/blog/profile1.jpg";
+import Profile2 from "../assets/blog/profile2.jpg";
+import Profile3 from "../assets/blog/profile3.jpg";
+
+
 import blogbanner from "../assets/blog/blogbanner.png";
-import banner from "../assets/banner.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +22,7 @@ const blogPosts = [
         image: Mtn,
         author: "Philomina Akekudaga",
         date: "January 09, 2025",
-        profile: Profile1,
+        profile: Profile3,
     },
     {
         id: 2,
@@ -37,7 +40,7 @@ const blogPosts = [
         image: Mtn,
         author: "Judith Abani",
         date: "October 18, 2024",
-        profile: Profile1,
+        profile: Profile2,
     },
     {
         id: 4,
@@ -46,7 +49,7 @@ const blogPosts = [
         image: Picbanner,
         author: "Philomina Akekudaga",
         date: "June 07, 2024",
-        profile: Profile1,
+        profile: Profile3,
     },
 ];
 
@@ -91,7 +94,7 @@ const Blog = () => {
 
             {/* Latest Blog */}
             <div className="w-full flex justify-center my-10 h-[400px]">
-                <div className="px-4 flex flex-col w-[1130px] h-[316px]">
+                <div className="px-4 flex flex-col w-[1140px] h-[316px]">
                     <div className="mb-8">
                         <input
                             type="text"
@@ -106,6 +109,7 @@ const Blog = () => {
                             <img
                                 src={latestBlog.image}
                                 alt={latestBlog.title}
+                                loading="lazy"
                                 className="w-full lg:w-[500px] h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-105"
                             />
                         </div>
@@ -120,6 +124,7 @@ const Blog = () => {
                                 <img
                                     src={latestBlog.profile}
                                     alt={latestBlog.author}
+                                    loading="lazy"
                                     className="w-12 h-12 rounded-full object-cover"
                                 />
                                 <div>
@@ -143,7 +148,7 @@ const Blog = () => {
 
             {/* Blog Posts */}
             <div className="py-10 flex flex-col items-center justify-center">
-                <div className="w-[1130px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10">
+                <div className="w-[1120px] pr-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
                     {currentPosts.map((post) => (
                         <div
                             key={post.id}
@@ -201,11 +206,6 @@ const Blog = () => {
                     ))}
                 </div>
             </div>
-
-
-            <section>
-                <img src={banner} alt="banner" className="object-cover w-full h-[400px]" loading="lazy" />
-            </section>
         </div>
     );
 };

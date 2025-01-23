@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react"
-import herobg from "../assets/herobg.png"
+import videobg from "../assets/videobg.mp4"
 import sectbg from "../assets/sectbg.png"
 import sectImg from "../assets/sectImg1.png"
 import sectImg2 from "../assets/sectImg2.png"
@@ -12,22 +12,13 @@ import "aos/dist/aos.css";
 import Slider from "../Components/Slider"
 import TeamSlider from "../Components/TeamSlider"
 
-//brands image
-import brand1 from "../assets/brand/brand1.png"
-import brand2 from "../assets/brand/brand2.png"
-import brand3 from "../assets/brand/brand3.png"
-import brand4 from "../assets/brand/brand4.png"
-import brand5 from "../assets/brand/brand5.png"
-import brand6 from "../assets/brand/brand6.png"
-
-
-import banner from "../assets/banner.png"
 
 import idIcon from "../assets/interactive.png"
 
 import Mtn from "../assets/blog/mtn.png"
 import Picbanner from "../assets/blog/picbanner.png";
 import { useNavigate } from "react-router-dom";
+import Brands from "../Components/Brands"
 
 
 
@@ -100,13 +91,13 @@ const Home = () => {
         "Creative & Experience Design": {
             title: "Creative & Experience Design",
             description: "Deliver engaging and immersive experiences",
-            items: ["Brand strategy", "Content creation"],
+            items: ["Brand strategy", "UI/UX design", "Content creation"],
             link: "/digital",
         },
         "Technology & Innovation": {
             title: "Technology & Innovation",
             description: "Innovate with cutting-edge technology solutions",
-            items: ["UI/UX design", "Custom software development", "AI solutions", "Cloud services"],
+            items: ["Custom software development", "AI solutions", "Cloud services"],
             link: "/media",
         },
         "Marketing & Performance": {
@@ -119,16 +110,25 @@ const Home = () => {
 
     return (
         <div className="overflow-hidden">
-            <div className="relative w-full bg-cover">
-                <img
+            <div className="relative w-full bg-cover bg-black">
+                {/* <img
                     src={herobg}
                     className="w-full h-[700px] lg:h-[700px] sm:h-[400px] bg-cover object-cover"
                     loading="lazy"
                     alt="Hero Background"
-                />
-                <div className="absolute lg:bottom-[-58px] left-0 md:left-[50px] lg:left-[200px] w-full md:w-[780px] h-auto p-4 sm:p-6 bg-[#ED0707] bg-opacity-60">
-                    <div className="w-full md:w-[731px]">
-                        <div className="w-full lg:w-[537px]">
+                /> */}
+                <video
+                    src={videobg}
+                    className={`w-full h-[700px] object-cover`}
+                    loading="lazy"
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                ></video>
+                <div className="absolute lg:bottom-[-58px] left-0 md:left-[50px] lg:left-[200px] w-full md:w-[780px] h-auto p-4 sm:p-6 bg-[#ED0707] rounded-t-[20px] bg-opacity-60">
+                    <div className="w-full md:w-[731px] ">
+                        <div className="w-full lg:w-[637px]">
                             <h1 className="text-white font-light text-[32px] sm:text-[36px] md:text-[48px] leading-tight md:leading-[56px]">
                                 TRANSFORM YOUR <span className="text-black font-bold">DIGITAL </span>
                                 PRESENCE
@@ -154,7 +154,7 @@ const Home = () => {
                                 className="rounded-bl-[20px] w-full h-auto"
                                 loading="lazy"
                             />
-                            <div className="absolute lg:top-[-10px] top-16 left-[40%] transform -translate-x-1/2 lg:translate-x-0 lg:left-[100px]">
+                            <div data-aos="zoom-in" className="absolute lg:top-[-10px] top-16 left-[40%] transform -translate-x-1/2 lg:translate-x-0 lg:left-[70px]">
                                 <img
                                     src={sectImg}
                                     alt="Image Overlay"
@@ -165,15 +165,15 @@ const Home = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="lg:w-[500px] w-full mb-20 lg:h-[300px] h-auto bg-black flex px-10 py-20">
+                        <div className="lg:w-[500px] w-full mb-20 lg:h-[300px] h-auto flex px-10 py-20">
                             <div className=" w-full lg:h-[205px] h-auto text-left">
                                 <div className="lg:w-full w-full h-auto">
-                                    <h2 className="text-white font-bold text-[20px] sm:text-[25px] leading-[30px] sm:leading-[36px]">
+                                    <h2 className="text-black font-bold text-[20px] sm:text-[25px] leading-[30px] sm:leading-[36px]">
                                         You found us, you're doing something right!
                                     </h2>
                                 </div>
                                 <div className="lg:w-[381px] w-full lg:h-[119px] h-auto mt-4 text-left">
-                                    <span className="text-[12px] sm:text-[14px] text-white leading-5 font-normal">
+                                    <span className="text-[12px] sm:text-[14px] text-black leading-5 font-normal">
 
                                         We are Interactive Digital, a 360 marketing solutions provider. We are sticklers for measurable results, insight and data-driven experiences.
 
@@ -207,12 +207,12 @@ const Home = () => {
                         {/* Red Container with Dynamic Content */}
                         <div
                             onClick={handleRedContainerClick}
-                            className="absolute top-[6%] left-0 w-[530px] h-[250px] bg-[#ED0707] bg-opacity-70 pl-[200px] py-8 cursor-pointer"
+                            className="absolute top-[6%] left-0 w-[530px] h-[250px] bg-[#ED0707] rounded-r-[20px] bg-opacity-70 pl-[200px] py-8 cursor-pointer"
                         >
                             <div className="w-[292px] h-[180px] text-white">
                                 <h2 className="text-[20px]">{tabContent[hoverTab].title}</h2>
                                 <span className="text-[17px] flex mb-4">{tabContent[hoverTab].description}</span>
-                                <ul className="list-disc pl-[20px] text-[13px]">
+                                <ul data-aos="zoom-in" className="list-disc pl-[20px] text-[13px]">
                                     {tabContent[hoverTab].items.map((item, index) => (
                                         <li key={index}>{item}</li>
                                     ))}
@@ -221,13 +221,14 @@ const Home = () => {
                         </div>
 
                         {/* Tabs */}
-                        <div className="absolute bottom-0 left-0 w-[1200px] h-[70px] pl-[200px]">
+                        <div data-aos="fade-down-left" className="absolute bottom-0 left-0 w-[1200px] h-[70px] pl-[200px]">
                             <div className="flex gap-4">
                                 {Object.keys(tabContent).map((tab) => (
                                     <span
                                         key={tab}
+                                        onClick={handleRedContainerClick}
                                         onMouseEnter={() => setHoverTab(tab)}
-                                        className="p-4 cursor-pointer bg-[#F4F4F4] text-black hover:bg-[#ED0707] hover:text-white transition-colors"
+                                        className="p-4 cursor-pointer bg-[#F4F4F4] text-black rounded-[20px] hover:bg-[#ED0707] hover:text-white transition-colors"
                                     >
                                         {tab}
                                     </span>
@@ -254,8 +255,8 @@ const Home = () => {
                             />
                             <div className="w-[1px] h-[80px] bg-[#D8D8D8]"></div>
                             <div className="">
-                                <h3 className="text-[26px] mb-2">Always listening</h3>
-                                <span className="text-[14px] text-[#666C89]">
+                                <h3 className="text-[20px] font-semibold mb-2">Always listening</h3>
+                                <span className="text-[14px] text-[#141414]">
                                     We dig into data and consumer behaviour to uncover insights that fuel your Marketing success.
                                 </span>
                             </div>
@@ -269,8 +270,8 @@ const Home = () => {
                             />
                             <div className="w-[1px] h-[80px] bg-[#D8D8D8]"></div>
                             <div className="">
-                                <h3 className="text-[26px] mb-2">Always Creating</h3>
-                                <div className="text-[14px] text-[#666C89] w-[290px]">
+                                <h3 className="text-[20px] font-semibold mb-4">Always Creating</h3>
+                                <div className="text-[14px] text-[#141414] w-[290px]">
                                     Our award-winning team turns insights into impactful digital experiences that engage your audience and drive results.                                </div>
                             </div>
                         </div>
@@ -283,8 +284,8 @@ const Home = () => {
                             />
                             <div className="w-[1px] h-[80px] bg-[#D8D8D8]"></div>
                             <div className="">
-                                <h3 className="text-[26px] mb-2">Always Getting Stuff Done</h3>
-                                <span className="text-[14px] text-[#666C89]">
+                                <h3 className="text-[20px] font-semibold mb-2">Always Getting Stuff Done</h3>
+                                <span className="text-[14px] text-[#141414]">
                                     We track, learn, and optimize your campaigns for better performance and lasting results.                                </span>
                             </div>
                         </div>
@@ -325,19 +326,21 @@ const Home = () => {
             </section>
 
             <section className="flex items-center justify-center">
-                <div className=" lg:h-[470px] h-auto bg-white p-6">
-                    <div
-                        className="flex lg:flex-row flex-col lg:space-x-6 space-x-0 gap-4 lg:gap-0">
+                <div className="lg:h-[470px] h-auto p-6">
+                    <div className="flex lg:flex-row flex-col lg:space-x-6 space-x-0 lg:gap-0 gap-0">
                         {blogPosts.map((post) => (
-                            <div key={post.id}
+                            <div
+                                key={post.id}
                                 onClick={() => handleReadMore(post.id)}
-                                className="flex-shrink-0 lg:w-64 mb-4 lg:mb-0 cursor-pointer">
+                                className="flex-shrink-0 lg:w-64 mb-4 lg:mb-0 cursor-pointer overflow-hidden"
+                            >
                                 <img
                                     src={post.image}
                                     alt={post.title}
-                                    className="w-[216px] h-40 rounded-lg object-cover mb-4 transform transition-transform duration-300 hover:scale-105"
+                                    loading="lazy"
+                                    className="w-[256px] h-[180px] rounded-lg object-cover mb-4 transform transition-transform duration-300 hover:scale-105"
                                 />
-                                <div className="lg:h-[120px] h-auto">
+                                <div className="lg:h-[120px] h-auto overflow-hidden">
                                     <h3 className="font-semibold text-[14px] mb-2 line-clamp-2">
                                         {post.title}
                                     </h3>
@@ -360,21 +363,7 @@ const Home = () => {
             </section>
 
             <section>
-                <div className="hidden bg-[#EFEFF0] w-full h-[140px] items-center justify-center">
-                    <div className="w-[1245px] h-[58px] flex items-center justify-between">
-                        <img src={brand1} alt="brand" className="object-cover" loading="lazy" />
-                        <img src={brand2} alt="brand" className="object-cover" loading="lazy" />
-                        <img src={brand3} alt="brand" className="object-cover" loading="lazy" />
-                        <img src={brand4} alt="brand" className="object-cover" loading="lazy" />
-                        <img src={brand5} alt="brand" className="object-cover" loading="lazy" />
-                        <img src={brand6} alt="brand" className="object-cover" loading="lazy" />
-
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <img src={banner} alt="banner" className="object-cover w-full lg:h-[400px]" loading="lazy" />
+                <Brands />
             </section>
 
 

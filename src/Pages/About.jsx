@@ -1,7 +1,13 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/no-unescaped-entities */
+import { useEffect, useState } from "react"
 import aboutbg from "../assets/about/abtbanner.png"
 import SlickSlider from "../Components/SlickSlider";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import about1 from "../assets/about/about1.png"
 import about2 from "../assets/about/about2.png"
@@ -14,9 +20,14 @@ import pattern from "../assets/about/pattern.png"
 import missionImg from "../assets/about/missionImg.png"
 
 
-import banner from "../assets/banner.png"
 import { FaArrowRight } from "react-icons/fa";
 import CountUp from "react-countup";
+import { motion, stagger, useAnimate } from "framer-motion";
+
+const randomNumberBetween = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
 
 
 const About = () => {
@@ -24,6 +35,78 @@ const About = () => {
     //     top: 0,
     //     behavior: 'smooth',
     // });
+
+    const valuesData = [
+        { title: "Excellence", description: "Setting the highest standards in digital innovation" },
+        { title: "Leadership", description: "Pioneering new paths in digital transformation" },
+        { title: "Integrity", description: "Building trust through transparent partnerships" },
+        { title: "Teamwork", description: "Collaborating to create exceptional outcomes" },
+        { title: "Empathy", description: "Understanding audiences to deliver authentic connections" },
+    ];
+
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const toggleContent = (index) => {
+        setActiveIndex(activeIndex === index ? null : index); // Toggle content visibility
+    };
+
+    const [scope, animate] = useAnimate();
+    const onButtonClick = () => {
+        const sparkles = Array.from({ length: 20 });
+        const sparklesAnimation = sparkles.map((_, index) => [
+            `.sparkle-${index}`,
+            {
+                x: randomNumberBetween(-150, 150), // Increase movement range
+                y: randomNumberBetween(-150, 150),
+                scale: randomNumberBetween(2, 3), // Larger sparkles
+                opacity: 1,
+            },
+            {
+                duration: 0.8, // Slower animation
+                at: "<",
+            },
+        ]);
+
+        const sparklesFadeOut = sparkles.map((_, index) => [
+            `.sparkle-${index}`,
+            {
+                opacity: 0,
+                scale: 0,
+            },
+            {
+                duration: 1, // Slower fade-out
+                at: "<",
+            },
+        ]);
+
+        const sparklesReset = sparkles.map((_, index) => [
+            `.sparkle-${index}`,
+            {
+                x: 0,
+                y: 0,
+            },
+            {
+                duration: 0.000001,
+            },
+        ]);
+
+        animate([
+            ...sparklesReset,
+            [".letter", { y: -32 }, { duration: 0.2, delay: stagger(0.05) }],
+            ["button", { scale: 0.8 }, { duration: 0.1, at: "<" }],
+            ["button", { scale: 1 }, { duration: 0.1 }],
+            ...sparklesAnimation,
+            [".letter", { y: 0 }, { duration: 0.000001 }],
+            ...sparklesFadeOut,
+        ]);
+    };
+
+    useEffect(() => {
+        AOS.init({
+            duration: 3000,
+        });
+        AOS.refresh();
+    }, []);
     return (
         <div className="overflow-hidden">
             <div className="relative">
@@ -55,20 +138,72 @@ const About = () => {
                             </p>
 
                             <div className="flex w-[419px] h-[46px] items-center justify-between">
-                                <a href="/contact" className="flex items-center justify-between px-6 w-[200px] h-full bg-[#DC2625] hover:bg-[#ba2727] text-white rounded-[70px] shadow-md cursor-pointer">
-                                    <button>Schedule Call</button>
-                                    <FaArrowRight />
-                                </a>
+                                <div
+                                    ref={scope}
+                                    className="flex items-center justify-center px-6 w-[200px] h-full bg-[#DC2625] hover:bg-[#ba2727] text-white rounded-[70px] shadow-md cursor-pointer"
+                                >
+                                    <button onClick={onButtonClick} className="relative">
+                                        <span className="sr-only">Schedule Call</span>
+                                        <span className="block h-8 overflow-hidden" aria-hidden>
+                                            {["S", "c", "h", "e", "d", "u", "l", "e", " ", "C", "a", "l", "l"].map((letter, index) => (
+                                                <span
+                                                    data-letter={letter}
+                                                    className="letter relative inline-block h-8 leading-8 after:absolute after:left-0 after:top-full after:h-8 after:content-[attr(data-letter)]"
+                                                    key={`${letter}-${index}`}
+                                                >
+                                                    {letter === " " ? "\u00A0" : letter} {/* Add a non-breaking space for the space character */}
+                                                </span>
+                                            ))}
+                                        </span>
+
+                                        <span
+                                            aria-hidden
+                                            className="pointer-events-none absolute inset-0 -z-10 block"
+                                        >
+                                            {Array.from({ length: 40 }).map((_, index) => (
+                                                <svg
+                                                    className={`absolute left-1/2 top-1/2 opacity-0 sparkle-${index}`}
+                                                    key={index}
+                                                    viewBox="0 0 122 117"
+                                                    width="20"
+                                                    height="20"
+                                                >
+                                                    <path
+                                                        className="fill-red-600"
+                                                        d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"
+                                                    />
+                                                </svg>
+                                            ))}
+                                        </span>
+                                    </button>
+                                    <a href="/contact" className="ml-4">
+                                        <motion.div
+                                            animate={{
+                                                x: [0, 4, -2, 4, 0], // Define the vibration motion
+                                            }}
+                                            transition={{
+                                                duration: 0.5, // Adjust duration for each cycle
+                                                repeat: Infinity, // Loop animation
+                                                ease: "easeInOut", // Smooth easing
+                                            }}
+                                        >
+                                            <FaArrowRight />
+                                        </motion.div>
+                                    </a>
+
+                                </div>
                                 <a href="/case studies" className="underline text-[#3F4352] font-semibold text-[16px]">View Case Studies</a>
                             </div>
+
                         </div>
                         <div className="flex flex-col gap-4 w-[555px] h-full pl-16">
                             <div className="flex">
                                 <img src={about1} alt="abt"
+                                    data-aos="zoom-in-down"
                                     loading="lazy"
                                     className="w-[253px] h-[270px]" />
                                 <div>
-                                    <div className="flex flex-col items-start justify-center gap-4 bg-[#D9D9D9] p-6 rounded-lg shadow-md max-w-[259px] h-[281px]">
+                                    <div data-aos="zoom-in-left" className="flex flex-col items-start justify-center gap-4 bg-[#D9D9D9] p-6 rounded-lg shadow-md max-w-[259px] h-[281px]">
                                         <h1 className="text-6xl font-bold text-red-500"><CountUp end={89} duration={2} />+</h1>
                                         <p className="text-left text-gray-600 text-[16px] mt-2">
                                             some big companies that we work with, and trust us very much
@@ -90,7 +225,7 @@ const About = () => {
                                     />
 
                                     {/* Overlay and Content */}
-                                    <div className="absolute inset-0 flex px-4 py-8 justify-between">
+                                    <div data-aos="zoom-in-up" className="absolute inset-0 flex px-4 py-8 justify-between">
                                         {/* Text Content */}
                                         <div className="flex flex-col text-white gap-2">
                                             <small className="text-gray-300 text-sm">Increase Traffic and Boost Sales</small>
@@ -117,7 +252,7 @@ const About = () => {
             <section>
                 <div className="relative flex w-full h-[500px]">
                     <div className="flex flex-col flex-1 bg-[#F4F4F4] items-center justify-center">
-                        <div className="w-[450px] h-[141px] flex flex-col justify-between">
+                        <div data-aos="zoom-in" className="w-[450px] h-[141px] flex flex-col justify-between">
                             <span className="font-semibold text-[30px]">Purpose & Vision</span>
                             <p>Vision :<br />
                                 To be West Africa's most innovative digital agency, setting new standards for creative excellence and technological innovation..
@@ -134,7 +269,7 @@ const About = () => {
                         />
                     </div>
 
-                    <div className="absolute top-[45%] left-[50%] p-4 w-[460px] h-[130px] bg-[#ED0707] bg-opacity-70">
+                    <div data-aos="fade-left" className="absolute top-[45%] left-[50%] p-4 w-[460px] h-[130px] bg-[#ED0707] rounded-[20px] bg-opacity-70">
                         <p className="text-white">
                             Mission :<br />
                             To deliver innovative and impactful communication solutions
@@ -162,15 +297,40 @@ const About = () => {
 
                     <div className="absolute bottom-0 left-[280px] w-[900px] h-[500px] flex bg-white">
                         <div className="flex flex-col flex-1 pl-10 pt-[70px]">
-                            <div className="w-[410px]">
-                                <h2 className="text-[35px]">Our Values (ELITE)</h2>
-                                <p className="text-[18px] mb-2">Values (ELITE) Our values form the foundation of everything we do:</p>
-                                <ul className="list-disc pl-4">
-                                    <li className="mb-4 text-[#666C89]">Excellence: Setting the highest standards in digital innovation</li>
-                                    <li className="mb-4 text-[#666C89]">Leadership: Pioneering new paths in digital transformation</li>
-                                    <li className="mb-4 text-[#666C89]">Integrity: Building trust through transparent partnerships</li>
-                                    <li className="mb-4 text-[#666C89]">Teamwork: Collaborating to create exceptional outcomes</li>
-                                    <li className="mb-4 text-[#666C89]">Empathy: Understanding audiences to deliver authentic connections</li>
+                            <div className="w-[350px]">
+                                <h2 className="text-[35px] font-bold">Our Values</h2>
+                                <p className="text-[18px] mb-2">
+                                    Our values form the{" "}
+                                    <span className="text-[#ED0707] font-semibold">foundation</span> of
+                                    everything we do:
+                                </p>
+                                <ul className="space-y-4">
+                                    {valuesData.map((value, index) => (
+                                        <li key={value.title} className="border-b border-gray-300 pb-2">
+                                            <div
+                                                onClick={() => toggleContent(index)}
+                                                className="flex justify-between items-center cursor-pointer"
+                                            >
+                                                <span
+                                                    className="text-lg hover:text-[#ED0707] transition duration-300"
+                                                >
+                                                    {value.title}
+                                                </span>
+                                                <span
+                                                    className={`text-xl font-light ${activeIndex === index ? "text-[#ED0707]" : "text-gray-400"
+                                                        }`}
+                                                >
+                                                    {activeIndex === index ? "-" : "+"}
+                                                </span>
+                                            </div>
+                                            <div
+                                                className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${activeIndex === index ? "max-h-[200px]" : "max-h-0"
+                                                    }`}
+                                            >
+                                                <p className="mt-2 text-gray-700 text-sm">{value.description}</p>
+                                            </div>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -247,10 +407,6 @@ const About = () => {
 
             <section>
                 <SlickSlider />
-            </section>
-
-            <section>
-                <img src={banner} alt="banner" className="object-cover w-full lg:h-[400px]" loading="lazy" />
             </section>
         </div>
     )
