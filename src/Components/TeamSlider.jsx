@@ -52,12 +52,12 @@ const TeamSlider = () => {
         <section>
             <div className="relative w-full overflow-hidden">
                 {/* Image positioned in the top-right corner */}
-                <div className=" absolute top-0 right-0">
+                <div className="hidden lg:flex absolute top-0 right-0">
                     <img src={pattern} alt="pattern" className="object-cover" loading="lazy" />
                 </div>
 
                 {/* Content section with padding-left applied only here */}
-                <div className="flex flex-col lg:pl-[200px] pl-4 bg-[#F7F7F8]">
+                <div className="flex flex-col lg:pl-[200px] px-4 bg-[#F7F7F8]">
                     <div className="w-full py-4">
                         <div>
                             <h3 className="text-[25px] font-semibold">
@@ -67,14 +67,14 @@ const TeamSlider = () => {
                     </div>
 
                     {/* Slider Content */}
-                    <div className="flex flex-col sm:flex-row w-[1100px] lg:h-[450px] items-center overflow-hidden mx-auto">
+                    <div className="flex flex-col sm:flex-row lg:w-[1100px] lg:h-[450px] items-center overflow-hidden mx-auto">
                         {/* Person Image */}
-                        <div className="w-[350px] h-[300px] sm:mr-8 mb-4 sm:mb-0">
+                        <div className="lg:w-[350px] h-[300px] lg:mr-8 mr-0 mb-4 lg:mb-0">
                             <img src={image} alt={name} className="w-full h-full object-cover rounded-lg shadow-lg" />
                         </div>
 
                         {/* Testimonial Content */}
-                        <div className="flex flex-col justify-center max-w-lg text-center sm:text-left">
+                        <div className="flex flex-col justify-center max-w-lg text-left sm:text-left">
                             <h2 className="text-[32px] font-semibold leading-tight text-[#141415]">
                                 {name}
                             </h2>

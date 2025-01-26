@@ -83,18 +83,18 @@ const Blog = () => {
     };
 
     return (
-        <div>
+        <div className="overflow-hidden">
             {/* Blog Banner */}
             <div className="relative">
-                <img src={blogbanner} alt="about" className="object-cover w-full" loading="lazy" />
-                <div className="absolute top-[285px] left-[195px] w-[858px] h-[72px] flex flex-col gap-2">
+                <img src={blogbanner} alt="about" className="object-cover w-full h-[400px]" loading="lazy" />
+                <div className="absolute lg:top-[285px] top-[60%] lg:left-[195px] left-[15%] lg:w-[858px] lg:h-[72px] flex flex-col gap-2">
                     <h2 className="text-[40px] font-medium text-white">Latest news</h2>
                 </div>
             </div>
 
             {/* Latest Blog */}
-            <div className="w-full flex justify-center my-10 h-[400px]">
-                <div className="px-4 flex flex-col w-[1140px] h-[316px]">
+            <div className="w-full flex justify-center my-10 lg:h-[400px]">
+                <div className="lg:px-4 flex flex-col lg:w-[1140px] w-full lg:h-[316px]">
                     <div className="mb-8">
                         <input
                             type="text"
@@ -104,8 +104,8 @@ const Blog = () => {
                     </div>
                     <div
                         onClick={() => handleReadMore(latestBlog.id)}
-                        className="flex flex-col lg:flex-row items-center gap-8 bg-white p-6 rounded-lg shadow-lg max-w-6xl mx-auto cursor-pointer">
-                        <div className="flex-1">
+                        className="flex flex-col lg:flex-row h-[700px] items-center gap-8 bg-white p-6 rounded-lg shadow-lg max-w-6xl mx-auto cursor-pointer">
+                        <div className="lg:flex-1">
                             <img
                                 src={latestBlog.image}
                                 alt={latestBlog.title}
@@ -113,7 +113,7 @@ const Blog = () => {
                                 className="w-full lg:w-[500px] h-[300px] object-cover rounded-lg transform transition-transform duration-300 hover:scale-105"
                             />
                         </div>
-                        <div className="flex-1 flex flex-col justify-center">
+                        <div className="lg:flex-1 flex flex-col justify-center">
                             <h2 className="text-2xl font-bold text-gray-800 mb-4 line-clamp-2">
                                 {latestBlog.title}
                             </h2>
@@ -148,13 +148,12 @@ const Blog = () => {
 
             {/* Blog Posts */}
             <div className="py-10 flex flex-col items-center justify-center">
-                <div className="w-[1120px] pr-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+                <div className="lg:w-[1120px] pr-2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
                     {currentPosts.map((post) => (
                         <div
                             key={post.id}
                             onClick={() => handleReadMore(post.id)}
-                            className="bg-white cursor-pointer rounded-lg shadow-lg overflow-hidden flex flex-col"
-                        >
+                            className="bg-white cursor-pointer rounded-lg shadow-lg overflow-hidden flex flex-col">
                             <div className="relative overflow-hidden">
                                 <img
                                     src={post.image}
@@ -207,6 +206,7 @@ const Blog = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

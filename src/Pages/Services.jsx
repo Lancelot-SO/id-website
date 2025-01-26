@@ -1,6 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import servicebg from "../assets/service/servicebg.png"
-import service1 from "../assets/service/service1.png"
+import service1 from "../assets/service/digital1.jpg"
+import service2 from "../assets/service/creative.jpg"
+import service3 from "../assets/service/tech.jpg"
+import service4 from "../assets/service/market.jpg"
+
+
+
 import "./Services.css"
 
 
@@ -11,12 +17,12 @@ const Services = () => {
     //     behavior: 'smooth',
     // });
     return (
-        <div>
-            <div className="relative">
+        <div className="">
+            <div className="relative overflow-hidden">
                 <img
                     src={servicebg}
                     alt="about"
-                    className="object-cover w-full lg:h-full h-[700px]"
+                    className="object-cover w-full lg:h-full h-[500px]"
                     loading="lazy"
                 />
                 <div className="absolute top-[325px] left-[15px] w-full lg:h-[72px] flex flex-col gap-2 lg:top-[50%] lg:left-[30%] lg:w-[558px]">
@@ -27,19 +33,20 @@ const Services = () => {
                 </div>
             </div>
             <div className="w-full h-auto">
-                <section>
-                    <div className="w-full h-[300px] flex pl-[200px] items-center">
-                        <div className="relative w-[1105px] h-[240px]">
+                <section className="overflow-hidden">
+                    <div className="w-full lg:h-[300px] flex lg:flex-row flex-col lg:pl-[200px] 4xl:pl-[400px] items-center overflow-hidden">
+                        <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             <img
                                 src={service1}
                                 alt="about"
-                                className="object-cover w-[600px] h-full"
+                                className="object-cover lg:w-[600px] w-full h-[250px]"
                                 loading="lazy"
                             />
-                            <a href="/strategy" className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg py-1 px-8 w-[650px] h-[220px]">
-                                <h2 className="text-2xl font-bold mb-2">Digital Strategy & Consulting</h2>
-                                <p className="text-gray-600 text-base mb-2">
-                                    In today’s digital-first world, strategy is more than a plan; it’s your compass to success. We design roadmaps that turn bold ideas into measurable results.                                 </p>
+                            <a href="/strategy" className="absolute lg:top-1/2 top-[60%] ml-2 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
+                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Digital Strategy & Consulting</h2>
+                                <p className="text-gray-600 lg:text-base text-[14px] mb-2">
+                                    In today’s digital-first world, strategy is more than a plan; it’s your compass to success. We design roadmaps that turn bold ideas into measurable results.
+                                </p>
                                 <ul className="list-disc pl-5 text-gray-800">
                                     <li className="font-semibold">Business Analysis</li>
                                     <li className="font-semibold">Digital Channel Optimization</li>
@@ -53,12 +60,12 @@ const Services = () => {
                 </section>
 
                 <section>
-                    <div className="w-full h-[300px] flex pl-[200px] items-center animate">
-                        <div className="relative w-[1105px] h-[240px]">
+                    <div className="w-full lg:h-[300px] flex lg:flex-row flex-col-reverse lg:pl-[200px] 4xl:pl-[400px] lg:items-center animate">
+                        <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             {/* Card Section */}
                             <a
                                 href="/digital"
-                                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 w-[650px] h-[220px] z-10 text-right"
+                                className="absolute lg:top-1/2 top-[63%] lg:left-0 left-[7%] transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 lg:w-[650px] w-[350px] lg:h-[220px] z-10 lg:text-right"
                                 style={{ marginRight: "-100px" }} /* Overlap onto the image */
                             >
                                 <h2 className="text-2xl font-bold mb-2">Creative &  Experience Design</h2>
@@ -77,9 +84,9 @@ const Services = () => {
 
                             {/* Image Section */}
                             <img
-                                src={service1}
+                                src={service2}
                                 alt="about"
-                                className="object-cover w-[600px] h-full absolute top-0 right-0"
+                                className="object-cover lg:w-[600px] lg:h-full h-[250px] absolute top-0 right-0"
                                 loading="lazy"
                             />
                         </div>
@@ -87,17 +94,17 @@ const Services = () => {
                 </section>
 
                 <section>
-                    <div className="w-full h-[300px] flex pl-[200px] items-center animate">
-                        <div className="relative w-[1105px] h-[240px]">
+                    <div className="w-full lg:h-[300px] flex lg:flex-row flex-col lg:pl-[200px] 4xl:pl-[400px] items-center animate">
+                        <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             <img
-                                src={service1}
+                                src={service3}
                                 alt="about"
-                                className="object-cover w-[600px] h-full"
+                                className="object-cover lg:w-[600px] w-full h-[250px]"
                                 loading="lazy"
                             />
-                            <a href="/strategy" className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-8 w-[650px] h-[220px]">
-                                <h2 className="text-2xl font-bold mb-2">Tech & Innovation</h2>
-                                <p className="text-gray-600 text-base mb-4">
+                            <a href="/media" className="absolute lg:top-1/2 top-[60%] ml-6 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
+                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Tech & Innovation</h2>
+                                <p className="text-gray-600 lg:text-base text-[14px] mb-2">
                                     Transform your business with data-driven digital
                                 </p>
                                 <ul className="list-disc pl-5 text-gray-800">
@@ -113,17 +120,18 @@ const Services = () => {
 
 
                 <section>
-                    <div className="w-full h-[300px] flex pl-[200px] items-center animate">
-                        <div className="relative w-[1105px] h-[240px]">
+                    <div className="w-full lg:h-[300px] flex lg:flex-row flex-col-reverse lg:pl-[200px] 4xl:pl-[400px] lg:items-center animate">
+                        <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             {/* Card Section */}
                             <a
-                                href="/advert"
-                                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-8 w-[650px] h-[220px] z-10 text-right"
+                                href="/digital"
+                                className="absolute lg:top-1/2 top-[63%] lg:left-0 left-[7%] transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 lg:w-[650px] w-[350px] lg:h-[220px] z-10 lg:text-right"
                                 style={{ marginRight: "-100px" }} /* Overlap onto the image */
                             >
                                 <h2 className="text-2xl font-bold mb-2">Marketing & Performance</h2>
-                                <p className="text-gray-600 text-base mb-4">
-                                    Drive results that matter with data-driven strategies and creative campaigns that connect your brand with the right audience for maximum impact.                                </p>
+                                <p className="text-gray-600 text-base mb-2">
+                                    Drive results that matter with data-driven strategies and creative campaigns that connect your brand with the right audience for maximum impact.
+                                </p>
                                 <ul className="pl-5 list-disc list-inside text-gray-800">
                                     <li className="font-semibold list-disc">Performance Marketing</li>
                                     <li className="font-semibold">Social Media</li>
@@ -136,14 +144,15 @@ const Services = () => {
 
                             {/* Image Section */}
                             <img
-                                src={service1}
+                                src={service4}
                                 alt="about"
-                                className="object-cover w-[600px] h-full absolute top-0 right-0"
+                                className="object-cover lg:w-[600px] lg:h-full h-[250px] absolute top-0 right-0"
                                 loading="lazy"
                             />
                         </div>
                     </div>
                 </section>
+
             </div>
 
 

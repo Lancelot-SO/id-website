@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="lg:w-[1168px] w-full lg:h-[315px] h-auto flex lg:flex-row flex-col items-center justify-between lg:px-4 px-0">
                 {/* Brand Section */}
                 <div className="flex flex-col items-start lg:w-[270px] w-full lg:h-[287px] h-auto justify-between py-5 px-4 lg:px-0">
-                    <div className='w-[280px] h-[70px]'>
+                    <div className='w-[280px] lg:h-[70px]'>
                         <div className="w-full h-full flex gap-1">
                             <img src={footerlogo} alt='logo' className='object-cover' loading='lazy' />
                         </div>

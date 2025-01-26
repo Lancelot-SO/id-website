@@ -126,11 +126,11 @@ const Home = () => {
                     autoPlay
                     playsInline
                 ></video>
-                <div className="absolute lg:bottom-[-58px] left-0 md:left-[50px] lg:left-[200px] w-full md:w-[780px] h-auto p-4 sm:p-6 bg-[#ED0707] rounded-t-[20px] bg-opacity-60">
+                <div className="absolute lg:bottom-[-58px] left-0 md:left-[50px] lg:left-[200px] w-full lg:w-[750px] h-auto p-4 sm:p-6 bg-[#ED0707] lg:rounded-t-[20px] bg-opacity-60">
                     <div className="w-full md:w-[731px] ">
                         <div className="w-full lg:w-[637px]">
-                            <h1 className="text-white font-light text-[32px] sm:text-[36px] md:text-[48px] leading-tight md:leading-[56px]">
-                                TRANSFORM YOUR <span className="text-black font-bold">DIGITAL </span>
+                            <h1 className="text-white font-light text-[32px] sm:text-[36px] lg:text-[48px] leading-tight md:leading-[56px]">
+                                TRANSFORM YOUR <span className="text-black font-bold text-[40px] lg:text-[54px]">DIGITAL </span>
                                 PRESENCE
                             </h1>
                         </div>
@@ -144,17 +144,17 @@ const Home = () => {
 
 
             <section>
-                <div className="w-full mt-[100px] flex items-center lg:px-[200px] px-0">
-                    <div className="lg:w-[1050px] w-full lg:h-[457px] h-auto flex lg:flex-row flex-col items-center">
+                <div className="w-full lg:mt-[100px] mt-[120px] flex items-center lg:px-[200px] px-0">
+                    <div className="lg:w-[1050px] w-full lg:h-[457px] h-[540px] flex lg:flex-row flex-col items-center">
                         {/* Left Section */}
                         <div className="relative lg:w-[553px] w-full h-auto rounded-bl-[20px]">
                             <img
                                 src={sectbg}
                                 alt="Background"
-                                className="rounded-bl-[20px] w-full h-auto"
+                                className="rounded-bl-[20px] w-full lg:h-auto h-[350px]"
                                 loading="lazy"
                             />
-                            <div data-aos="zoom-in" className="absolute lg:top-[-10px] top-16 left-[40%] transform -translate-x-1/2 lg:translate-x-0 lg:left-[70px]">
+                            <div data-aos="zoom-in" className="absolute lg:top-[-10px] top-16 left-[13%] transform -translate-x-1/2 lg:translate-x-0 lg:left-[70px]">
                                 <img
                                     src={sectImg}
                                     alt="Image Overlay"
@@ -165,8 +165,8 @@ const Home = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="lg:w-[500px] w-full mb-20 lg:h-[300px] h-auto flex px-10 py-20">
-                            <div className=" w-full lg:h-[205px] h-auto text-left">
+                        <div className="lg:w-[500px] w-full mb-20 lg:h-[300px] flex lg:px-10 px-4 lg:py-20 py-5">
+                            <div className=" w-full lg:h-[205px] text-left">
                                 <div className="lg:w-full w-full h-auto">
                                     <h2 className="text-black font-bold text-[20px] sm:text-[25px] leading-[30px] sm:leading-[36px]">
                                         You found us, you're doing something right!
@@ -187,9 +187,9 @@ const Home = () => {
 
 
             <section>
-                <div className="w-full lg:h-[510px] h-auto py-4 bg-slate-100">
+                <div className="w-full lg:h-[510px] h-[500px] py-4 bg-slate-100">
                     {/* Header Section */}
-                    <div className="lg:w-[450px] w-full lg:ml-[200px] ml-4 px-4 lg:px-0 py-4">
+                    <div className="lg:w-[450px] w-full lg:ml-[200px] ml-4 px-2 lg:px-0 py-4">
                         <h3 className="lg:text-[25px] text-[20px] font-bold lg:leading-[64px] leading-[30px]">
                             Our Services
                         </h3>
@@ -200,14 +200,14 @@ const Home = () => {
                         <img
                             src={sectImg2}
                             alt="sect"
-                            className="object-cover w-full h-[350px]"
+                            className="object-cover w-full lg:h-[350px] h-[400px]"
                             loading="lazy"
                         />
 
                         {/* Red Container with Dynamic Content */}
                         <div
                             onClick={handleRedContainerClick}
-                            className="absolute top-[6%] left-0 w-[530px] h-[250px] bg-[#ED0707] rounded-r-[20px] bg-opacity-70 pl-[200px] py-8 cursor-pointer"
+                            className="absolute top-[6%] left-0 w-[530px] h-[250px] bg-[#ED0707] rounded-r-[20px] bg-opacity-70 lg:pl-[200px] pl-4 py-8 cursor-pointer"
                         >
                             <div className="w-[292px] h-[180px] text-white">
                                 <h2 className="text-[20px]">{tabContent[hoverTab].title}</h2>
@@ -219,10 +219,11 @@ const Home = () => {
                                 </ul>
                             </div>
                         </div>
-
-                        {/* Tabs */}
-                        <div data-aos="fade-down-left" className="absolute bottom-0 left-0 w-[1200px] h-[70px] pl-[200px]">
-                            <div className="flex gap-4">
+                        <div
+                            data-aos="fade-down-left"
+                            className="absolute lg:bottom-0 bottom-5 left-0 lg:w-[1200px] w-full lg:h-[70px] lg:pl-[200px] pl-4 overflow-x-auto"
+                        >
+                            <div className="flex gap-4 whitespace-nowrap">
                                 {Object.keys(tabContent).map((tab) => (
                                     <span
                                         key={tab}
@@ -235,18 +236,20 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </section>
 
 
             <section>
-                <div className="w-full h-[360px] bg-[#F7F8F9] flex flex-col items-center justify-center">
+                <div className="w-full lg:h-[360px] h-[600px] bg-[#F7F8F9] flex flex-col lg:items-center lg:justify-center">
                     <div className="w-full text-center mb-6">
-                        <h2 className="text-[45px]">THE !D PLAYBOOK</h2>
+                        <h2 className="lg:text-[45px] text-[30px]">THE !D PLAYBOOK</h2>
                     </div>
-                    <div className="w-[1110px] flex justify-between gap-6">
-                        <div className="flex gap-4 w-[411px] h-[140px] items-center">
+                    <div className="lg:w-[1110px] 4xl:w-[1500px] w-full flex lg:flex-row flex-col justify-between gap-6">
+                        <div className="flex gap-4 lg:w-[411px] h-[140px] px-4 items-center">
                             <img
                                 src={idIcon}
                                 alt="interactive"
@@ -261,7 +264,7 @@ const Home = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className="flex gap-4 w-[411px] h-[140px] items-center">
+                        <div className="flex gap-4 lg:w-[411px] px-4 lg:h-[140px] h-[160px] items-center">
                             <img
                                 src={idIcon}
                                 alt="interactive"
@@ -271,11 +274,11 @@ const Home = () => {
                             <div className="w-[1px] h-[80px] bg-[#D8D8D8]"></div>
                             <div className="">
                                 <h3 className="text-[20px] font-semibold mb-4">Always Creating</h3>
-                                <div className="text-[14px] text-[#141414] w-[290px]">
+                                <div className="text-[14px] text-[#141414] pr-6 w-[290px]">
                                     Our award-winning team turns insights into impactful digital experiences that engage your audience and drive results.                                </div>
                             </div>
                         </div>
-                        <div className="flex gap-4 w-[411px] h-[140px] items-center">
+                        <div className="flex gap-4 lg:w-[411px] px-4 h-[140px] items-center">
                             <img
                                 src={idIcon}
                                 alt="interactive"
@@ -300,13 +303,13 @@ const Home = () => {
                     <div className="lg:w-[1047px] w-full lg:h-[132px] h-auto lg:ml-[200px] mx-auto">
                         {/* Quote Text */}
                         <span className="text-white font-bold lg:text-[30px] text-[20px] lg:leading-[44px] leading-[30px] block mb-4">
-                            “A good advertisement is one which sells the product without drawing attention to itself.”
+                            “Without strategy, content is just stuff, and the world has enough stuff.”
                         </span>
 
                         {/* Author and Contact Button */}
                         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                             <span className="text-white font-medium lg:text-[20px] text-[16px] lg:leading-[28px] leading-[24px] mb-4 lg:mb-0">
-                                By David Ogilvy
+                                By Arjun Basu
                             </span>
 
                         </div>
@@ -316,7 +319,7 @@ const Home = () => {
 
 
             <section>
-                <div>
+                <div className="">
                     <Slider />
                 </div>
             </section>
@@ -338,7 +341,7 @@ const Home = () => {
                                     src={post.image}
                                     alt={post.title}
                                     loading="lazy"
-                                    className="w-[256px] h-[180px] rounded-lg object-cover mb-4 transform transition-transform duration-300 hover:scale-105"
+                                    className="lg:w-[256px] w-full h-[180px] rounded-lg object-cover mb-4 transform transition-transform duration-300 hover:scale-105"
                                 />
                                 <div className="lg:h-[120px] h-auto overflow-hidden">
                                     <h3 className="font-semibold text-[14px] mb-2 line-clamp-2">

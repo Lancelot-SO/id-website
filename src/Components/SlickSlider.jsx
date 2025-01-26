@@ -133,7 +133,7 @@ const SlickSlider = () => {
         <div className="relative overflow-hidden pt-10 lg:h-[700px] h-[1100px]">
             <div className="text-left mb-12 px-4 lg:pl-[200px] ">
                 <h2 className="lg:text-4xl text-[20px] font-bold leading-tight">Leadership</h2>
-                <p className="w-[950px] h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
+                <p className="lg:w-[950px] lg:h-[40px] lg:text-lg text-[14px] text-gray-600 mt-2 ">
                     Our team brings together diverse expertise in digital strategy, creative technology, and market innovation. Led by professionals with global experience and local insight, we're positioned to drive digital excellence across West Africa.
                 </p>
             </div>

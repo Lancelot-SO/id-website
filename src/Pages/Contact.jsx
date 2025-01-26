@@ -7,26 +7,26 @@ const Contact = () => {
         behavior: 'smooth',
     });
     return (
-        <div>
+        <div className="overflow-hidden">
             <div className="relative">
-                <img src={contactbanner} alt="about" className="object-cover w-full" loading="lazy" />
-                <div className=" absolute top-[285px] left-[195px] w-[858px] h-[72px] flex flex-col gap-2">
+                <img src={contactbanner} alt="about" className="object-cover w-full lg:h-full h-[300px]" loading="lazy" />
+                <div className=" absolute lg:top-[285px] top-[60%] left-[40px] lg:left-[195px] lg:w-[858px] lg:h-[72px] h-[400px] flex flex-col gap-2">
                     <h2 className="text-[40px] font-bold text-white">Contact Us</h2>
                 </div>
             </div>
 
             <section>
-                <div className="w-full h-[900px] bg-white flex items-center justify-center">
-                    <div className="relative w-[838px] h-[793px]">
+                <div className="w-full lg:h-[900px] bg-white flex items-center justify-center">
+                    <div className="relative lg:w-[838px] lg:h-[793px]">
                         <img
                             src={telephone}
                             alt="telephone"
-                            className="object-cover"
+                            className="object-cover w-[1000px] lg:h-full h-[600px]"
                             loading="lazy"
                         />
 
 
-                        <div className="absolute top-8 right-8 bg-opacity-80 p-8  w-[400px]">
+                        <div className="absolute top-8 lg:right-4 right-[30px] bg-opacity-80 lg:p-8 lg:w-[400px] w-[300px]">
                             <form className="space-y-6">
                                 <div>
                                     <label htmlFor="fullName" className="block text-gray-700 font-medium">

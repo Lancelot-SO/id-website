@@ -20,16 +20,16 @@ const CaseStudy = () => {
 
 
     return (
-        <div className="">
+        <div className="overflow-hidden">
             {/* Header Section */}
             <div className="relative">
-                <img src={servicebg} alt="about" className="object-cover w-full" loading="lazy" />
-                <div className="absolute top-[325px] left-[15px] w-full lg:h-[72px] flex flex-col gap-2 lg:top-[50%] lg:left-[30%] lg:w-[558px]">
-                    <h2 className="text-[48px] font-bold text-white text-center">Our Case Studies</h2>
+                <img src={servicebg} alt="about" className="object-cover w-full h-[400px]" loading="lazy" />
+                <div className="absolute top-[245px] left-[15px] w-full lg:h-[72px] flex flex-col gap-2 lg:top-[50%] lg:left-[30%] lg:w-[558px]">
+                    <h2 className="lg:text-[48px] text-[30px] font-bold text-white text-center">Our Case Studies</h2>
                 </div>
             </div>
 
-            <div className="image-gallery">
+            <div className="image-gallery p-6 lg:p-0 ml-4 lg:ml-[200px] 4xl:ml-[400px] lg:mt-10 mt-0">
                 <div className="column">
                     <a href="/mtndetail" className="photo">
                         <img src={Mtn} alt="phot" loading="lazy" />

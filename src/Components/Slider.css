@@ -2,9 +2,11 @@
     align-items: center;
     display: flex;
     height: 400px;
-    margin-left: 250px;
-    max-width: 1000px;
+    margin-left: 240px;
+    width: 1000px;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .gallery-item {
@@ -160,6 +162,9 @@
     .gallery-container {
         max-width: 100%;
         height: auto;
+        margin-left: 13px;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 
     .gallery-item {

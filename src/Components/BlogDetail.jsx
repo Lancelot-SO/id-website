@@ -126,7 +126,7 @@ const BlogDetail = () => {
     if (!blogPost) return <div className="mt-[100px] flex items-center justify-center h-[500px] ">Blog post not found!</div>;
 
     return (
-        <div className="bg-gray-50 min-h-screen mt-[100px]">
+        <div className="bg-gray-50 min-h-screen mt-[100px] overflow-hidden">
             <div className="max-w-[1125px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Main Content */}
                 <main className="lg:col-span-2 bg-white rounded-md shadow-md">
@@ -136,7 +136,7 @@ const BlogDetail = () => {
                         className="w-full h-[381px] object-cover rounded-lg"
                         loading="lazy"
                     />
-                    <div className="p-6">
+                    <div className="lg:p-6 p-2">
                         <h1 className="text-3xl font-bold mb-2">{blogPost.title}</h1>
                         <div className="flex items-center text-gray-500 mb-4 space-x-2">
                             <img
@@ -164,7 +164,7 @@ const BlogDetail = () => {
                         <p className="text-gray-700 leading-relaxed">
                             {blogPost.content3}
                         </p>
-                        <div className="flex w-full mt-6 gap-10">
+                        <div className="flex lg:flex-row flex-col w-full mt-6 gap-10">
                             <img
                                 src={blogPost.photo1}
                                 alt="Author"

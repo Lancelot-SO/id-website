@@ -26,7 +26,7 @@ const Media = () => {
     };
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             {/* Video Section */}
             <div className="relative w-full h-[500px]">
                 {!isPlaying && (
@@ -63,21 +63,21 @@ const Media = () => {
 
             {/* Section Content */}
             <section
-                className="w-full h-[1445px] bg-cover py-20"
+                className="w-full lg:h-[1445px] bg-cover py-20"
                 style={{ backgroundImage: `url(${mediabg})` }}
             >
                 {/* Section content */}
-                <div className="lg:mx-[200px] mx-0 w-[1122px] h-[170px] text-white">
-                    <h1 className="text-4xl font-bold">Content Production</h1>
+                <div className="lg:mx-[200px] px-4 lg:p-0 mx-0 lg:w-[1122px] lg:h-[170px] h-[400px] text-white">
+                    <h1 className="text-4xl font-bold ">Content Production</h1>
                     <p className="mt-4 text-md text-white/80">
                         Not to brag, but no one tells your story like we will behind the cameras. From ideation to post-production, great storytelling captures both subtle as well as explosive narratives. We believe in brands that empathise and understand the experiences of everyday people. Our listening culture shapes the ethos of our production team and our desire to achieve compelling results; And with timely distribution of produced content, our crew is always on standby, just for you.Except on holidays, but we can work something out ;
                     </p>
                 </div>
 
                 <div>
-                    <div className='w-[1112px] h-[450px] lg:mx-[200px] mx-0 lg:my-[170px] my-0 flex gap-10'>
+                    <div className='lg:w-[1112px] lg:h-[450px] h-[700px] lg:mx-[200px] mx-0 lg:my-[170px] my-0 flex lg:flex-row flex-col-reverse gap-10'>
                         {/* Header */}
-                        <div className="text-left mb-6 w-[231px] h-auto">
+                        <div className="text-left mb-6 w-[231px] h-auto px-4 lg:p-0">
                             <h2 className="w-[191px] flex items-center justify-center text-lg font-semibold text-red-500 bg-white py-2 px-4 rounded-md">
                                 Project List
                             </h2>
@@ -101,24 +101,24 @@ const Media = () => {
                             </ul>
                         </div>
 
-                        <div className="w-[881px] relative h-full flex lg:px-20">
+                        <div className="lg:w-[881px] relative h-full flex lg:px-20">
                             <div className="relative">
                                 <img
                                     src={media1}
                                     alt="Background 1"
-                                    className="w-[600px] absolute top-8 left-8 z-0"
+                                    className="w-[600px] absolute top-8 lg:left-8 z-0"
                                     loading="lazy"
                                 />
                                 <img
                                     src={media2}
                                     alt="Background 2"
-                                    className="w-[600px] top-20 left-16 border-4 border-white rounded-[16px] z-20"
+                                    className="w-[600px] top-20 lg:left-16 border-4 border-white rounded-[16px] z-20"
                                     loading="lazy"
                                 />
                                 <img
                                     src={media3}
                                     alt="Background 3"
-                                    className="w-[600px] absolute top-20 left-20 z-30 border-4 border-white rounded-[16px]"
+                                    className="w-[600px] absolute top-20 lg:left-20 z-30 border-4 border-white rounded-[16px]"
                                     loading="lazy"
                                 />
                             </div>
@@ -126,7 +126,7 @@ const Media = () => {
                     </div>
                 </div>
 
-                <div className="lg:mx-[200px] mx-0 w-[1113px] h-[200px] flex gap-4">
+                <div className="lg:mx-[200px] mx-0 lg:w-[1113px] lg:h-[200px] flex lg:flex-row flex-col gap-4">
                     <img
                         src={prod1}
                         alt="Play Video"

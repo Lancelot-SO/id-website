@@ -53,15 +53,15 @@ const Slider = () => {
     return (
         <section>
             <div className="w-full">
-                <div className="w-full lg:h-[630px] h-[430px] flex flex-col bg-[#F7F7F8]">
-                    <div className="w-full lg:w-[500px] h-[130px] lg:ml-[200px] pl-0 py-4 px-6">
+                <div className="w-full lg:h-[630px] h-[400px] flex flex-col bg-[#F7F7F8]">
+                    <div className="w-full lg:w-[500px] h-[130px] lg:ml-[200px] pl-4 py-4 px-6">
                         <h3 className="text-[25px] font-bold leading-[64px]">Our Portfolio</h3>
                         <span className="text-[#141415] text-[16px] font-normal leading-[21px]">
                             Providing transformational solutions for Africa's unique challenges
                         </span>
                     </div>
-                    <div className="w-full h-[470px] items-center justify-center lg:my-0 my-28">
-                        <div className="gallery-container">
+                    <div className="w-full lg:h-[470px] items-center justify-center lg:my-0 my-28">
+                        <div className="gallery-container 4xl:w-[1500px] 4xl:ml-[200px]">
                             {carouselItems.map((image, index) => (
                                 <img
                                     key={index}
