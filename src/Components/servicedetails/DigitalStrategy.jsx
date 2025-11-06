@@ -1,0 +1,139 @@
+/* eslint-disable react/no-unescaped-entities */
+import servicesbg from "../../assets/service/servicesbg.png"
+// import service1 from "../assets/service/digital1.jpg"
+// import service2 from "../assets/service/creative.jpg"
+// import service3 from "../assets/service/tech.jpg"
+// import service4 from "../assets/service/market.jpg"
+
+import { CircleCheckBig } from "lucide-react"
+
+
+
+const DigitalStrategy = () => {
+    // window.scrollTo({
+    //     top: 0,
+    //     behavior: 'smooth',
+    // });
+    return (
+        <div className="overflow-hidden">
+            <div className="relative overflow-hidden">
+                {/* Background Image */}
+                <img
+                    src={servicesbg}
+                    alt="services background"
+                    className="object-cover w-full lg:h-[80vh] h-[500px] brightness-[0.45]"
+                    loading="lazy"
+                />
+
+
+                {/* Text Content - middle left */}
+                <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 md:px-[100px] lg:px-[200px] 4xl:pl-[400px] text-left">
+                    <div className="max-w-3xl">
+                        <h1 className="text-white font-bold text-[32px] sm:text-[42px] lg:text-[54px] leading-tight drop-shadow-lg">
+                            Crafting Digital Excellence for
+                            <br />
+                            Africa’s Ambitious Brand
+                        </h1>
+                        <p className="text-gray-200 mt-4 text-[14px] sm:text-[16px] lg:text-[18px] font-light tracking-wide">
+                            Crafting Digital Excellence for Africa’s Ambitious Brand
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="min-h-screen bg-white md:p-12 lg:p-16 py-8">
+                <div className="px-4 lg:px-[150px] 4xl:px-[400px]">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            {/* Left Section */}
+                            <div className="flex flex-col">
+                                <h1 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+                                    Our Services
+                                </h1>
+
+                                {/* Stats Card */}
+                                <div className="border-2 border-gray-900 rounded-3xl p-8 md:p-12 flex-1 flex flex-col justify-center">
+                                    <h2 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 leading-tight">
+                                        230 Projects
+                                        <br />
+                                        worked on
+                                    </h2>
+                                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                                        Create memorable digital experiences that drive results.
+                                        Create memorable digital experiences that drive results.
+                                        Create memorable digital experiences that drive results.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Right Section */}
+                            <div>
+                                {/* Intro Text */}
+                                <p className="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
+                                    From our roots as a dynamic social media agency, we've evolved
+                                    into West Africa's emerging digital powerhouse. Founded on the
+                                    principle that authentic connections drive business growth, we
+                                    combine deep local insights with global digital excellence to
+                                    deliver results that matter.
+                                </p>
+
+                                {/* Service Cards */}
+                                <div className="space-y-6">
+                                    {/* Digital Transformation */}
+                                    <div className="bg-gray-100 rounded-2xl p-4 border-2 border-transparent hover:border-[#ED0707] transition-all duration-300 group cursor-pointer">
+                                        <div className="flex flex-col lg:flex-row items-start gap-4">
+                                            {/* Title Pill */}
+                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white">
+                                                <span>Digital transformation</span>
+                                                <CircleCheckBig className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                                            </div>
+                                            {/* Description */}
+                                            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                                Create memorable digital experiences that drive results.
+                                                Create memorable digital experiences that drive results.
+                                                Create memorable digital experiences that drive results.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Market Insight */}
+                                    <div className="bg-gray-100 rounded-2xl p-4 border-2 border-transparent hover:border-[#ED0707] transition-all duration-300 group cursor-pointer">
+                                        <div className="flex flex-col lg:flex-row items-start gap-4">
+                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white">
+                                                <span>Market Insight</span>
+                                                <CircleCheckBig className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                                            </div>
+                                            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                                Create memorable digital experiences that drive results.
+                                                Create memorable digital experiences that drive results.
+                                                Create memorable digital experiences that drive results.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Performance Optimization */}
+                                    <div className="bg-gray-100 rounded-2xl p-4  border-2 border-transparent hover:border-[#ED0707] transition-all duration-300 group cursor-pointer">
+                                        <div className="flex flex-col lg:flex-row items-start gap-4">
+                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white">
+                                                <span>Performance optimization</span>
+                                                <CircleCheckBig className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                                            </div>
+                                            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                                                Create memorable digital experiences that drive results.
+                                                Create memorable digital experiences that drive results.
+                                                Create memorable digital experiences that drive results.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Right Section */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default DigitalStrategy
