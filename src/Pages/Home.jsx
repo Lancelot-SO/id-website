@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react"
-import videobg from "../assets/videobg.mp4"
+// import videobg from "../assets/videobg.mp4"
 import sectbg from "../assets/sectbg.png"
 import sectImg from "../assets/sectImg1.png"
 import sectImg2 from "../assets/sectImg2.png"
@@ -111,13 +111,7 @@ const Home = () => {
     return (
         <div className="overflow-hidden">
             <div className="relative w-full bg-cover bg-black">
-                {/* <img
-                    src={herobg}
-                    className="w-full h-[700px] lg:h-[700px] sm:h-[400px] bg-cover object-cover"
-                    loading="lazy"
-                    alt="Hero Background"
-                /> */}
-                <video
+                {/* <video
                     src={videobg}
                     className={`w-full h-[700px] object-cover`}
                     loading="lazy"
@@ -125,18 +119,35 @@ const Home = () => {
                     loop
                     autoPlay
                     playsInline
-                ></video>
-                <div className="absolute lg:bottom-[-58px] left-0 md:left-[50px] lg:left-[200px] w-full lg:w-[750px] h-auto p-4 sm:p-6 bg-[#ED0707] lg:rounded-t-[20px] bg-opacity-60">
-                    <div className="w-full md:w-[731px] ">
-                        <div className="w-full lg:w-[637px]">
-                            <h1 className="text-white font-light text-[32px] sm:text-[36px] lg:text-[48px] leading-tight md:leading-[56px]">
-                                TRANSFORM YOUR <span className="text-black font-bold text-[40px] lg:text-[54px]">DIGITAL </span>
-                                PRESENCE
-                            </h1>
+                ></video> */}
+                <div className="w-full h-[150px] lg:h-[80vh] 4xl:h-[75vh] pro13:h-[68vh] mt-[89px] 4xl:mt-[88px] overflow-hidden">
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                        src="https://www.youtube.com/embed/u6tmLKHe3RE?autoplay=1&mute=1&controls=0&loop=1&playlist=u6tmLKHe3RE&modestbranding=1&showinfo=0&rel=0&disablekb=1"
+                        title="Background Video"
+                        style={{ border: 0 }}
+                        allow="autoplay; encrypted-media"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                    ></iframe>
+                </div>
+
+
+
+                <div className="absolute lg:bottom-[-58px] left-0 md:left-[50px] lg:left-[200px] w-[800px] h-auto p-4 lg:p-6 bg-[#ED0707] lg:rounded-t-[20px] bg-opacity-70">
+                    <div className="w-full flex">
+                        <div className="flex flex-col w-full">
+                            <div className="flex items-center gap-1">
+                                <h2 className="lg:text-[52px] text-[30px] msm:text-[28px]mt-[10px] text-white font-semibold">
+                                    Bold Ideas.
+                                </h2>
+                                <h1 className="lg:text-[60px] text-[48px] msm:text-[32px] text-white font-extrabold">Big Results!</h1>
+                            </div>
+
+                            <h2 className="text-white lg:text-[24px] text-[18px] msm:text-[15px]">
+                                Marketing solutions that transform your brand.
+                            </h2>
                         </div>
-                        <span className="block mt-2 text-[14px] sm:text-[16px] md:text-[20px] font-medium leading-[20px] md:leading-[28px] text-white opacity-90">
-                            Where Innovation Meets Impact.
-                        </span>
+
                     </div>
                 </div>
             </div>
@@ -144,8 +155,8 @@ const Home = () => {
 
 
             <section>
-                <div className="w-full lg:mt-[100px] mt-[120px] flex items-center lg:px-[200px] px-0">
-                    <div className="lg:w-[1050px] w-full lg:h-[457px] h-[540px] flex lg:flex-row flex-col items-center">
+                <div className="w-full lg:mt-[120px] mt-[120px] flex items-center lg:px-[200px] px-0 py-10 lg:py-0">
+                    <div className="lg:w-[1110px] w-full lg:h-[557px] h-[540px] flex lg:flex-row flex-col items-center">
                         {/* Left Section */}
                         <div className="relative lg:w-[553px] w-full h-auto rounded-bl-[20px]">
                             <img
@@ -154,7 +165,7 @@ const Home = () => {
                                 className="rounded-bl-[20px] w-full lg:h-auto h-[350px]"
                                 loading="lazy"
                             />
-                            <div data-aos="zoom-in" className="absolute lg:top-[-10px] top-16 left-[13%] transform -translate-x-1/2 lg:translate-x-0 lg:left-[70px]">
+                            <div data-aos="zoom-in" className="absolute lg:top-[-100px] top-16 left-[13%] transform -translate-x-1/2 lg:translate-x-0 lg:left-[70px]">
                                 <img
                                     src={sectImg}
                                     alt="Image Overlay"
@@ -165,18 +176,16 @@ const Home = () => {
                         </div>
 
                         {/* Right Section */}
-                        <div className="lg:w-[500px] w-full mb-20 lg:h-[300px] flex lg:px-10 px-4 lg:py-20 py-5">
+                        <div className="lg:w-[700px] w-full mb-[200px] lg:h-[250px] flex lg:px-0 px-4 lg:py-10 py-5 lg:ml-20">
                             <div className=" w-full lg:h-[205px] text-left">
                                 <div className="lg:w-full w-full h-auto">
                                     <h2 className="text-black font-bold text-[20px] sm:text-[25px] leading-[30px] sm:leading-[36px]">
-                                        You found us, you're doing something right!
+                                        Transforming West Africa's Digital Landscape
                                     </h2>
                                 </div>
-                                <div className="lg:w-[381px] w-full lg:h-[119px] h-auto mt-4 text-left">
-                                    <span className="text-[12px] sm:text-[14px] text-black leading-5 font-normal">
-
-                                        We are Interactive Digital, a 360 marketing solutions provider. We are sticklers for measurable results, insight and data-driven experiences.
-
+                                <div className=" w-full lg:h-[119px] h-auto mt-4 text-left">
+                                    <span className="text-[18px] text-black leading-5 font-normal">
+                                        We're more than a digital agency - we're transformation specialists delivering measurable impact through data-driven strategies, creative excellence, and technological innovation. Trusted by leading brands across West Africa to drive digital success.
                                     </span>
                                 </div>
                             </div>
