@@ -132,6 +132,69 @@ const DigitalStrategy = () => {
                     </div>
                 </div>
             </div>
+
+            {/* grid */}
+            <section className="bg-[#F9F9F9] py-16 px-6 md:px-[100px] lg:px-[220px] 4xl:px-[400px]">
+                <div className="max-w-7xl mx-auto">
+                    {/* Header Row */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 mb-12">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                            Our Portfolio Reels
+                        </h2>
+                        <p className="text-gray-600 leading-relaxed text-sm md:text-base max-w-xl">
+                            From our roots as a dynamic social media agency, we've evolved into West
+                            Africa's emerging digital powerhouse. Founded on the principle that
+                            authentic connections drive business growth, we combine deep local
+                            insights with global digital excellence to deliver results that matter.
+                        </p>
+                    </div>
+
+                    {/* Portfolio Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {[
+                            {
+                                src: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=900&q=80",
+                                title: "Project 1",
+                            },
+                            {
+                                src: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=900&q=80",
+                                title: "Project 2",
+                            },
+                            {
+                                src: "https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=900&q=80",
+                                title: "Project 3",
+                            },
+                            {
+                                src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80",
+                                title: "Project 4",
+                            },
+                        ].map((item, index) => (
+                            <div
+                                key={index}
+                                className="relative rounded-2xl overflow-hidden h-[250px] md:h-[300px] group"
+                            >
+                                {/* Image */}
+                                <img
+                                    src={item.src}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110"
+                                    loading="lazy"
+                                />
+
+                                {/* Sliding Red Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="absolute bottom-0 left-0 right-0 h-full translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out bg-gradient-to-t from-[#ED0707]/90 via-[#ED0707]/60 to-transparent flex items-center justify-center">
+                                        <span className="text-white text-xl md:text-2xl font-semibold">
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
         </div>
     )
 }

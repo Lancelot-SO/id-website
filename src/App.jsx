@@ -15,6 +15,7 @@ import Media from './Components/Media'
 import TopFooter from './Components/TopFooter'
 import MtnDetail from './Components/casedetails/MtnDetail'
 import DigitalStrategy from './Components/servicedetails/DigitalStrategy'
+import ExperienceDesign from './Components/servicedetails/ExperienceDesign'
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/media' element={<Media />} />
           <Route path='/strategy' element={<DigitalStrategy />} />
-
+          <Route path='/experience' element={<ExperienceDesign />} />
           <Route path='/mtndetail' element={<MtnDetail />} />
 
         </Routes>
