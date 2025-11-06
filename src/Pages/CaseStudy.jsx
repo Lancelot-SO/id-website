@@ -3,7 +3,7 @@ import React from "react";
 import "./CaseStudy.css";
 import servicebg from "../assets/service/servicebg.png";
 import Malt from "../assets/slider/img1.png";
-import Mtn from "../assets/slider/img4.png";
+import Mtn from "../assets/slider/img4.jpg";
 import Dosh from "../assets/slider/img2.png";
 import Item1 from "../assets/case/item1.png";
 import Item2 from "../assets/case/item2.png";

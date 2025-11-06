@@ -5,7 +5,7 @@ import "./Slider.css";
 import img1 from "../assets/slider/img1.png";
 import img2 from "../assets/slider/img2.png";
 import img3 from "../assets/slider/img3.png";
-import img4 from "../assets/slider/img4.png";
+import img4 from "../assets/slider/img4.jpg";
 import img5 from "../assets/slider/img5.png";
 
 const images = [img1, img2, img3, img4, img5];
