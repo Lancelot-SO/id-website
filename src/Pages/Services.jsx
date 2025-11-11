@@ -43,15 +43,15 @@ const Services = () => {
                                 loading="lazy"
                             />
                             <a href="/strategy" className="absolute lg:top-1/2 top-[60%] ml-2 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
-                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Digital Strategy & Consulting</h2>
+                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Brand Development</h2>
                                 <p className="text-gray-600 lg:text-base text-[14px] mb-2">
-                                    In today’s digital-first world, strategy is more than a plan; it’s your compass to success. We design roadmaps that turn bold ideas into measurable results.
+                                    We craft unique, powerful, and future-ready brands
                                 </p>
                                 <ul className="list-disc pl-5 text-gray-800">
-                                    <li className="font-semibold">Business Analysis</li>
-                                    <li className="font-semibold">Digital Channel Optimization</li>
-                                    <li className="font-semibold">Competitive Benchmarking</li>
-                                    <li className="font-semibold">Growth Strategy</li>
+                                    <li className="font-semibold">Brand strategy</li>
+                                    <li className="font-semibold">Campaign development</li>
+                                    <li className="font-semibold">Social media management</li>
+                                    <li className="font-semibold">Content creation</li>
                                 </ul>
                                 <span className="hover:underline text-[#ED0707] flex justify-end">Read More</span>
                             </a>
@@ -64,18 +64,18 @@ const Services = () => {
                         <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             {/* Card Section */}
                             <a
-                                href="/experience"
+                                href="/production"
                                 className="absolute lg:top-1/2 top-[63%] lg:left-0 left-[7%] transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 lg:w-[650px] w-[350px] lg:h-[220px] z-10 lg:text-right"
                                 style={{ marginRight: "-100px" }} /* Overlap onto the image */
                             >
-                                <h2 className="text-2xl font-bold mb-2">Creative &  Experience Design</h2>
+                                <h2 className="text-2xl font-bold mb-2">Content Production</h2>
                                 <p className="text-gray-600 text-base mb-2">
-                                    Transform ideas into experiences with the art of storytelling and design science.                                 </p>
+                                    Content production that tells your story, engages your audience, and drives results with creativity and precision                                 </p>
                                 <ul className="pl-5 list-disc list-inside text-gray-800">
-                                    <li className="font-semibold list-disc">Brand Strategy:</li>
-                                    <li className="font-semibold">UX/UI Design</li>
-                                    <li className="font-semibold">Data-Driven Insights</li>
-                                    <li className="font-semibold">Creative Campaign</li>
+                                    <li className="font-semibold list-disc">BMotion design</li>
+                                    <li className="font-semibold">Video production</li>
+                                    <li className="font-semibold">Social content</li>
+                                    <li className="font-semibold">Immersive experiences</li>
                                 </ul>
 
                                 <span className="hover:underline text-[#ED0707] flex justify-start">Read More</span>
@@ -102,15 +102,16 @@ const Services = () => {
                                 className="object-cover lg:w-[600px] w-full h-[250px]"
                                 loading="lazy"
                             />
-                            <a href="/media" className="absolute lg:top-1/2 top-[60%] ml-6 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
-                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Tech & Innovation</h2>
+                            <a href="/experience" className="absolute lg:top-1/2 top-[60%] ml-6 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
+                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Experience Design</h2>
                                 <p className="text-gray-600 lg:text-base text-[14px] mb-2">
-                                    Transform your business with data-driven digital
+                                    Building user-centric experiences that merge creativity with functionality
                                 </p>
                                 <ul className="list-disc pl-5 text-gray-800">
-                                    <li className="font-semibold">Web Development & App Development</li>
-                                    <li className="font-semibold">Digital Products</li>
-                                    <li className="font-semibold">Innovation Solutions</li>
+                                    <li className="font-semibold">UI/UX design</li>
+                                    <li className="font-semibold">Service design</li>
+                                    <li className="font-semibold">Customer journey mapping</li>
+                                    <li className="font-semibold">App/platform creation</li>
                                 </ul>
                                 <span className="hover:underline text-[#ED0707] flex justify-end">Read More</span>
                             </a>
@@ -124,18 +125,78 @@ const Services = () => {
                         <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             {/* Card Section */}
                             <a
+                                href="/creative"
+                                className="absolute lg:top-1/2 top-[63%] lg:left-0 left-[7%] transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 lg:w-[650px] w-[350px] lg:h-[220px] z-10 lg:text-right"
+                                style={{ marginRight: "-100px" }} /* Overlap onto the image */
+                            >
+                                <h2 className="text-2xl font-bold mb-2">Creative Technology</h2>
+                                <p className="text-gray-600 text-base mb-2">
+                                    We leverage the power of innovative tech to bring creative ideas to life and enhance brand experiences
+                                </p>
+                                <ul className="pl-5 list-disc list-inside text-gray-800">
+                                    <li className="font-semibold list-disc">AR/VR solutions</li>
+                                    <li className="font-semibold">AI implementation</li>
+                                    <li className="font-semibold">Interactive installations</li>
+                                </ul>
+
+                                <span className="hover:underline text-[#ED0707] flex justify-start">Read More</span>
+
+                            </a>
+
+                            {/* Image Section */}
+                            <img
+                                src={service4}
+                                alt="about"
+                                className="object-cover lg:w-[600px] lg:h-full h-[250px] absolute top-0 right-0"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="w-full lg:h-[300px] flex lg:flex-row flex-col lg:pl-[200px] 4xl:pl-[400px] items-center animate">
+                        <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
+                            <img
+                                src={service3}
+                                alt="about"
+                                className="object-cover lg:w-[600px] w-full h-[250px]"
+                                loading="lazy"
+                            />
+                            <a href="/media" className="absolute lg:top-1/2 top-[60%] ml-6 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
+                                <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Data and Analytics</h2>
+                                <p className="text-gray-600 lg:text-base text-[14px] mb-2">
+                                    We harness data and analytics to uncover valuable insights that fuel smart decision-making and growth
+                                </p>
+                                <ul className="list-disc pl-5 text-gray-800">
+                                    <li className="font-semibold">Performance marketing</li>
+                                    <li className="font-semibold">Customer insights</li>
+                                    <li className="font-semibold">Marketing analytics</li>
+                                    <li className="font-semibold">Predictive modeling</li>
+                                </ul>
+                                <span className="hover:underline text-[#ED0707] flex justify-end">Read More</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="w-full lg:h-[300px] flex lg:flex-row flex-col-reverse lg:pl-[200px] 4xl:pl-[400px] lg:items-center animate">
+                        <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
+                            {/* Card Section */}
+                            <a
                                 href="/digital"
                                 className="absolute lg:top-1/2 top-[63%] lg:left-0 left-[7%] transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 lg:w-[650px] w-[350px] lg:h-[220px] z-10 lg:text-right"
                                 style={{ marginRight: "-100px" }} /* Overlap onto the image */
                             >
-                                <h2 className="text-2xl font-bold mb-2">Marketing & Performance</h2>
+                                <h2 className="text-2xl font-bold mb-2">Innovation Consulting</h2>
                                 <p className="text-gray-600 text-base mb-2">
-                                    Drive results that matter with data-driven strategies and creative campaigns that connect your brand with the right audience for maximum impact.
+                                    We help your brand to adapt, disrupt, and lead in a digital-first world
                                 </p>
                                 <ul className="pl-5 list-disc list-inside text-gray-800">
-                                    <li className="font-semibold list-disc">Performance Marketing</li>
-                                    <li className="font-semibold">Social Media</li>
-                                    <li className="font-semibold">Content Strategy</li>
+                                    <li className="font-semibold list-disc">Digital transformation</li>
+                                    <li className="font-semibold">Innovation workshops</li>
+                                    <li className="font-semibold">Emerging tech integration</li>
                                 </ul>
 
                                 <span className="hover:underline text-[#ED0707] flex justify-start">Read More</span>

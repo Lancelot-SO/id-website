@@ -16,6 +16,8 @@ import TopFooter from './Components/TopFooter'
 import MtnDetail from './Components/casedetails/MtnDetail'
 import DigitalStrategy from './Components/servicedetails/DigitalStrategy'
 import ExperienceDesign from './Components/servicedetails/ExperienceDesign'
+import ContentProduction from './Components/servicedetails/ContentProduction'
+import CreativeTechnology from './Components/servicedetails/CreativeTechnology'
 
 function App() {
 
@@ -34,6 +36,9 @@ function App() {
           <Route path='/media' element={<Media />} />
           <Route path='/strategy' element={<DigitalStrategy />} />
           <Route path='/experience' element={<ExperienceDesign />} />
+          <Route path='/production' element={<ContentProduction />} />
+          <Route path='/creative' element={<CreativeTechnology />} />
+
           <Route path='/mtndetail' element={<MtnDetail />} />
 
         </Routes>
