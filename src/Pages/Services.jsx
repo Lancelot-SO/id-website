@@ -185,7 +185,7 @@ const Services = () => {
                         <div className="relative lg:w-[1105px] lg:h-[240px] h-[500px]">
                             {/* Card Section */}
                             <a
-                                href="/digital"
+                                href="/consulting"
                                 className="absolute lg:top-1/2 top-[63%] lg:left-0 left-[7%] transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg p-6 lg:w-[650px] w-[350px] lg:h-[220px] z-10 lg:text-right"
                                 style={{ marginRight: "-100px" }} /* Overlap onto the image */
                             >
