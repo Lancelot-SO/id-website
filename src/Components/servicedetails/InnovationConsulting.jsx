@@ -57,7 +57,7 @@ const InnovationConsulting = () => {
                 </div>
             </div>
 
-            <section className="bg-[#F9F9F9] py-16 px-4 md:px-[100px] lg:px-[200px]">
+            <section className="bg-[#F9F9F9] py-10 px-4 md:px-[100px] lg:px-[200px] 4xl:px-[400px]">
                 <div className="max-w-7xl mx-auto">
                     {/* Section Header */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 mb-12">
@@ -165,9 +165,9 @@ const InnovationConsulting = () => {
                 </div>
             </section>
 
-            <main className="min-h-[600px] bg-white text-gray-900">
+            <main className="min-h-[600px] bg-white text-gray-900 lg:px-[200px] 4xl:px-[400px]">
                 {/* Header */}
-                <div className="max-w-7xl mx-auto px-4 py-16">
+                <div className="max-w-7xl mx-auto px-4 lg:py-16 py-10">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start mb-20">
                         <h1 className="text-4xl font-bold tracking-tight">Our Portfolio</h1>
                         <div className="lg:col-span-2">

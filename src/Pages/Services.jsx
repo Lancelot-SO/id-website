@@ -163,7 +163,7 @@ const Services = () => {
                                 className="object-cover lg:w-[600px] w-full h-[250px]"
                                 loading="lazy"
                             />
-                            <a href="/media" className="absolute lg:top-1/2 top-[60%] ml-6 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
+                            <a href="/analytics" className="absolute lg:top-1/2 top-[60%] ml-6 lg:right-0 transform -translate-y-1/2 bg-[#F4F4F4] hover:bg-slate-200 shadow-lg border-b-2 border-gray-300 py-1 px-8 lg:w-[650px] w-[350px] lg:h-[220px]">
                                 <h2 className="lg:text-2xl text-[20px] font-bold mb-2">Data and Analytics</h2>
                                 <p className="text-gray-600 lg:text-base text-[14px] mb-2">
                                     We harness data and analytics to uncover valuable insights that fuel smart decision-making and growth

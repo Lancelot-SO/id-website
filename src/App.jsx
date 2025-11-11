@@ -19,6 +19,7 @@ import ExperienceDesign from './Components/servicedetails/ExperienceDesign'
 import ContentProduction from './Components/servicedetails/ContentProduction'
 import CreativeTechnology from './Components/servicedetails/CreativeTechnology'
 import InnovationConsulting from './Components/servicedetails/InnovationConsulting'
+import DataAnalytics from './Components/servicedetails/DataAnalytics'
 
 function App() {
 
@@ -40,6 +41,8 @@ function App() {
           <Route path='/production' element={<ContentProduction />} />
           <Route path='/creative' element={<CreativeTechnology />} />
           <Route path='/consulting' element={<InnovationConsulting />} />
+          <Route path='/analytics' element={<DataAnalytics />} />
+
           <Route path='/mtndetail' element={<MtnDetail />} />
 
         </Routes>
