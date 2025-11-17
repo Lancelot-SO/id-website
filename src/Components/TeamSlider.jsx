@@ -60,7 +60,7 @@ const TeamSlider = () => {
                 <div className="flex flex-col lg:pl-[200px] px-4 bg-[#F7F7F8]">
                     <div className="w-full py-4">
                         <div>
-                            <h3 className="text-[25px] font-semibold">
+                            <h3 className="text-[35px] font-semibold">
                                 Don't take our word for it. Ask them.
                             </h3>
                         </div>
