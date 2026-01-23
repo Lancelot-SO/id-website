@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 // import videobg from "../assets/videobg.mp4"
 import sectbg from "../assets/sectbg.png"
-import sectImg from "../assets/sectImg1.png"
+import sectImg from "../assets/sectImg3.png"
 // import sectImg2 from "../assets/sectImg2.png"
 
 import Digi from "../assets/blog/digi.jpg";
