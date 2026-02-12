@@ -47,20 +47,21 @@ const DigitalStrategy = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {/* Left Section */}
                             <div className="flex flex-col">
-                                <h1 className="text-4xl md:text-5xl font-bold mb-16 text-gray-900">
+                                <h1 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
                                     Our Services
                                 </h1>
 
                                 {/* Stats Card */}
                                 <div className="border-2 border-gray-900 rounded-3xl p-8 md:p-12 flex-1 flex flex-col justify-center">
-                                    <h2 className="text-5xl md:text-6xl font-medium mb-4 text-gray-900 leading-tight">
+                                    <h2 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 leading-tight">
                                         230 Projects
                                         <br />
                                         worked on
                                     </h2>
                                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                                        Create memorable digital experience that drive results Create memorable digital experience that drive results.
-                                        Create memorable digital experience that drive results..
+                                        Create memorable digital experiences that drive results.
+                                        Create memorable digital experiences that drive results.
+                                        Create memorable digital experiences that drive results.
                                     </p>
                                 </div>
                             </div>
@@ -68,7 +69,7 @@ const DigitalStrategy = () => {
                             {/* Right Section */}
                             <div>
                                 {/* Intro Text */}
-                                <p className="text-gray-600 leading-relaxed mb-12 text-sm md:text-base">
+                                <p className="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
                                     From our roots as a dynamic social media agency, we've evolved
                                     into West Africa's emerging digital powerhouse. Founded on the
                                     principle that authentic connections drive business growth, we
@@ -82,7 +83,7 @@ const DigitalStrategy = () => {
                                     <div className="bg-gray-100 rounded-2xl p-4 border-2 border-transparent hover:border-[#ED0707] transition-all duration-300 group cursor-pointer">
                                         <div className="flex flex-col lg:flex-row items-start gap-4">
                                             {/* Title Pill */}
-                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white bg-white">
+                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white">
                                                 <span>Digital transformation</span>
                                                 <CircleCheckBig className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
                                             </div>
@@ -98,7 +99,7 @@ const DigitalStrategy = () => {
                                     {/* Market Insight */}
                                     <div className="bg-gray-100 rounded-2xl p-4 border-2 border-transparent hover:border-[#ED0707] transition-all duration-300 group cursor-pointer">
                                         <div className="flex flex-col lg:flex-row items-start gap-4">
-                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white bg-white">
+                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white">
                                                 <span>Market Insight</span>
                                                 <CircleCheckBig className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
                                             </div>
@@ -113,7 +114,7 @@ const DigitalStrategy = () => {
                                     {/* Performance Optimization */}
                                     <div className="bg-gray-100 rounded-2xl p-4  border-2 border-transparent hover:border-[#ED0707] transition-all duration-300 group cursor-pointer">
                                         <div className="flex flex-col lg:flex-row items-start gap-4">
-                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white bg-white">
+                                            <div className="flex items-center gap-2 flex-shrink-0 px-4 py-1.5 rounded-full text-sm bg-transparent text-gray-900 font-semibold whitespace-nowrap transition-all duration-300 group-hover:bg-[#ED0707] group-hover:text-white">
                                                 <span>Performance optimization</span>
                                                 <CircleCheckBig className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
                                             </div>

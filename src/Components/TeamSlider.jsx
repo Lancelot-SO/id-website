@@ -2,7 +2,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import pattern from "../assets/pattern.png";
-import personImage from "../assets/slider/jay.png";
+import personImage from "../assets/slider/coro.png";
+import dosh from "../assets/slider/img2.png";
 import Mtn from "../assets/onlineadvert/mtn.png"
 
 const TeamSlider = () => {
@@ -25,11 +26,11 @@ const TeamSlider = () => {
         },
         {
             id: 3,
-            name: "Michael Chen",
+            name: "Dosh Revolution",
             title: "Product Manager",
-            company: "Innovation Hub",
-            image: personImage,
-            testimonial: "What sets Eduarix apart is its ability to foster meaningful connections between learners and experts across the globe. The knowledge sharing experience is unparalleled and has greatly benefited our organization."
+            company: "DOSH Revolution",
+            image: dosh,
+            testimonial: "Interactive Digital has been an integral part of our online success at DOSH for the past 3 years. Their understanding of the digital landscape in Ghana, creativity and top notch account management has enabled them to deliver exceptional results for our  social media engagement and digital marketing efforts, and I would highly recommend them to any business seeking to enhance their digital presence."
         }
     ];
 
@@ -60,7 +61,7 @@ const TeamSlider = () => {
                 <div className="flex flex-col lg:pl-[200px] px-4 bg-[#F7F7F8]">
                     <div className="w-full py-4">
                         <div>
-                            <h3 className="text-[35px] font-semibold">
+                            <h3 className="text-[25px] font-semibold">
                                 Don't take our word for it. Ask them.
                             </h3>
                         </div>

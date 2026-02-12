@@ -5,15 +5,12 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 import Team1 from "../assets/slider/team1.png"
 import Team2 from "../assets/slider/team2.png"
-import Kay from "../assets/slider/kay.png"
-import Kay2 from "../assets/slider/kay2.jpg"
+
 import Fred1 from "../assets/slider/Fred1.jpg"
 import Fred2 from "../assets/slider/Fred2.jpg"
 import Kofi from "../assets/slider/Kofi.jpg"
 import Kofi2 from "../assets/slider/Kofi2.jpg"
-import Jade from "../assets/slider/jade.png"
-import Danda from "../assets/slider/danda.png"
-import Danda1 from "../assets/slider/danda1.png"
+
 import Jasmine from "../assets/slider/jasmine.jpg"
 import Jasmine1 from "../assets/slider/jasmine2.jpg"
 
@@ -23,17 +20,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const data = [
+
     {
         id: 1,
-        photo: Kay,
-        hoverphoto: Kay2,
-        name: "Frank Adjei Otu",
-        position: "Creative Director",
-        desc: `A multidisciplinary creative with boundless imagination that pushes visuals, concepts and ideas beyond the limits of conventional thinking.
-A graduate of Kwame Nkrumah University of Science and Technology, Frank has 14 years' experience in the marketing communications space having worked in a few multinational agencies. He has delivered award winning work for brands such as Sky-Girls, Nestle Nescafé, Diageo, GTP and CFAO.`,
-    },
-    {
-        id: 2,
         photo: Fred1,
         hoverphoto: Fred2,
         name: "Fred Tackie-Yarboi",
@@ -42,7 +31,7 @@ A graduate of Kwame Nkrumah University of Science and Technology, Frank has 14 y
 He has experience delivering multi-channel campaigns across social, search, email, SEO and digital media, delivering business results for global and local brands.`,
     },
     {
-        id: 3,
+        id: 2,
         photo: Jasmine,
         hoverphoto: Jasmine1,
         name: "Jasmine Balfour",
@@ -50,7 +39,7 @@ He has experience delivering multi-channel campaigns across social, search, emai
         desc: `A spirited content writer and storyteller with a knack for transforming brand stories into lasting impressions. Her creative touch has brought life to renowned names like Malta Guinness, LemFi, Stanbic Bank, Gino Tomato Mix and more. With a flair for crafting narratives that strike a chord, Jasmine firmly believes that a sprinkle of wit and a dash of humour can turn a good story into a great one.`,
     },
     {
-        id: 4,
+        id: 3,
         photo: Kofi,
         hoverphoto: Kofi2,
         name: "Kofi Owusu-Akyaw",
@@ -58,24 +47,10 @@ He has experience delivering multi-channel campaigns across social, search, emai
         desc: `An Account manager with a passion for creative delivery that exceeds clients’ expectations while forging mutually rewarding bonds. He has over 6 years of digital marketing expertise spanning FMCG, Telco and Banking.
 Solution-oriented and with a demonstrable history of successful campaigns, he has worked on big ticket brands including MTN Ghana, Stanbic Bank, uniBank, GLICO and Surfline.`,
     },
+
+
     {
-        id: 5,
-        photo: Jade,
-        name: "Jade Appiah-Lartey",
-        position: "Head, Strategy",
-        desc: `Meet Jade Appiah-Lartey, a dynamic professional known for her strategic prowess, academic rigour, and unwavering commitment to driving success in the realm of marketing communication and business development. With a proven track record of delivering impactful results, Jade is poised to continue making significant contributions to the field while guiding organizations towards sustainable growth and prosperity.`,
-    },
-    {
-        id: 6,
-        photo: Danda,
-        hoverphoto: Danda1,
-        name: "Danda Berko Tagbor",
-        position: "Programme Manager",
-        desc: `An experienced marketer with 10+ years of work experience in the fields of brand/event management, credit control and project management.
-Her  work experience covers corporate administration, communications, strategic planning and management, people and client management as well as colleague relationship management.`,
-    },
-    {
-        id: 7,
+        id: 4,
         photo: Team1,
         hoverphoto: Team2,
         name: "Ekow Thompson",
